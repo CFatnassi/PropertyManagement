@@ -168,21 +168,25 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\CultureHelper.cs" />
+    <Compile Include="Helpers\MsgCode.cs" />
+    <Compile Include="Helpers\MsgUnit.cs" />
     <Compile Include="Migrations\202305311402448_mod1.cs" />
     <Compile Include="Migrations\202305311402448_mod1.Designer.cs">
       <DependentUpon>202305311402448_mod1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\AspNetUser.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\Company.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Owner.cs" />
     <Compile Include="Models\RealEstate.cs" />
@@ -190,7 +194,11 @@
     <Compile Include="Models\RentKind.cs" />
     <Compile Include="Models\Unit.cs" />
     <Compile Include="Models\UnitKind.cs" />
+    <Compile Include="Persistence\Company.cs" />
+    <Compile Include="Persistence\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ICompany.cs" />
+    <Compile Include="Repositories\IUnitOfWork.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -252,6 +260,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Base\" />
     <Folder Include="Views\Company\" />
   </ItemGroup>
   <ItemGroup>
