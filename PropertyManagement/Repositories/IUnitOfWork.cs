@@ -8,6 +8,7 @@ namespace PropertyManagement.Repositories
     public interface IUnitOfWork
     {
          ICompany Company { get;}
+         IUnit Unit { get;}
 
 
         void Complete();

@@ -11,6 +11,7 @@ namespace PropertyManagement.Models
     {
 
         public DbSet<Company> Companys { get; set; }
+        public DbSet<Unit> Units { get; set; }
 
 
         public ApplicationDbContext()

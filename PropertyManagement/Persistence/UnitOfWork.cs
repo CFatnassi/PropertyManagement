@@ -12,6 +12,7 @@ namespace PropertyManagement.Persistence
         private readonly ApplicationDbContext _context;
 
         public ICompany Company { get; private set; }
+        public IUnit Unit { get; private set; }
         
         
         public UnitOfWork(ApplicationDbContext context)
@@ -19,6 +20,7 @@ namespace PropertyManagement.Persistence
             
             _context = context;
             Company = new Company(context);
+            Unit = new Unit(context);
 
         }
 
