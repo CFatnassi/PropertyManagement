@@ -1,0 +1,16 @@
+﻿using PropertyManagement.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace PropertyManagement.Repositories
+{
+    public interface IRealEstate
+    {
+        void Add(RealEstate ObjToSave);
+        void Update(RealEstate ObjtToUpdate);
+        void Delete(Guid guid);
+        RealEstate GetMyRealEstate(Guid guid);
+    }
+}

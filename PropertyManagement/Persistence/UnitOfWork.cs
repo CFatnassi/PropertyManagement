@@ -13,6 +13,11 @@ namespace PropertyManagement.Persistence
 
         public ICompany Company { get; private set; }
         public IUnit Unit { get; private set; }
+        public IOwner Owner { get; private set; }
+        public IRealEstate RealEstate { get; private set; }
+        public IRealEstateKind RealEstateKind { get; private set; }
+        public IRentKind RentKind { get; private set; }
+        public IUnitKind UnitKind { get; private set; }
         
         
         public UnitOfWork(ApplicationDbContext context)
@@ -21,6 +26,11 @@ namespace PropertyManagement.Persistence
             _context = context;
             Company = new Company(context);
             Unit = new Unit(context);
+            Owner = new Owner(context);
+            RealEstate = new RealEstate(context);
+            RealEstateKind = new RealEstateKind(context);
+            UnitKind = new UnitKind(context);
+            RentKind = new RentKind(context);
 
         }
 

@@ -12,6 +12,11 @@ namespace PropertyManagement.Models
 
         public DbSet<Company> Companys { get; set; }
         public DbSet<Unit> Units { get; set; }
+        public DbSet<RealEstate> RealEstates { get; set; }
+        public DbSet<Owner> Owners { get; set; }
+        public DbSet<RealEstateKind> RealEstateKinds { get; set; }
+        public DbSet<RentKind> RentKinds { get; set; }
+        public DbSet<UnitKind> UnitKinds { get; set; }
 
 
         public ApplicationDbContext()
