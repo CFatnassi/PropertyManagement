@@ -192,14 +192,14 @@
     <Compile Include="Models\RealEstate.cs" />
     <Compile Include="Models\RealEstateKind.cs" />
     <Compile Include="Models\RentKind.cs" />
-    <Compile Include="Models\Unit.cs" />
+    <Compile Include="Models\Units.cs" />
     <Compile Include="Models\UnitKind.cs" />
     <Compile Include="Persistence\Company.cs" />
     <Compile Include="Persistence\Owner.cs" />
     <Compile Include="Persistence\RealEstate.cs" />
     <Compile Include="Persistence\RealEstateKind.cs" />
     <Compile Include="Persistence\RentKind.cs" />
-    <Compile Include="Persistence\Unit.cs" />
+    <Compile Include="Persistence\UnitRepo.cs" />
     <Compile Include="Persistence\UnitKind.cs" />
     <Compile Include="Persistence\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -208,7 +208,7 @@
     <Compile Include="Repositories\IRealEstate.cs" />
     <Compile Include="Repositories\IRealEstateKind.cs" />
     <Compile Include="Repositories\IRentKind.cs" />
-    <Compile Include="Repositories\IUnit.cs" />
+    <Compile Include="Repositories\IUnitRepo.cs" />
     <Compile Include="Repositories\IUnitKind.cs" />
     <Compile Include="Repositories\IUnitOfWork.cs" />
     <Compile Include="Startup.cs" />
