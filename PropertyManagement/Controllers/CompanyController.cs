@@ -1,4 +1,5 @@
-﻿using PropertyManagement.Models;
+﻿using PropertyManagement.Helpers;
+using PropertyManagement.Models;
 using PropertyManagement.Persistence;
 using PropertyManagement.Repositories;
 using System;
@@ -20,6 +21,7 @@ namespace PropertyManagement.Controllers
         // GET: Company
         public ActionResult Index()
         {
+
             return View();
         }
 
@@ -27,7 +29,28 @@ namespace PropertyManagement.Controllers
         {
             return View();
         }
+        public ActionResult Save(Models.Company company)
+        {
+            //MsgUnit msg = new MsgUnit();
+            _unitOfWork.Company.Add(company);
+            _unitOfWork.Complete();
 
+            return RedirectToAction("Index");
+        }
+        public ActionResult Edit(Models.Company company)
+        {
+            _unitOfWork.Company.Update(company);
+            _unitOfWork.Complete();
+
+            return RedirectToAction("Index");
+        }
+        public ActionResult Delete(Guid guid)
+        {
+            _unitOfWork.Company.Delete(guid);
+            _unitOfWork.Complete();
+
+            return View();
+        }
 
     }
 }
