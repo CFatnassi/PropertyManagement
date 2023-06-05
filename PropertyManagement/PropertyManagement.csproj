@@ -199,7 +199,7 @@
     <Compile Include="Persistence\RealEstate.cs" />
     <Compile Include="Persistence\RealEstateKind.cs" />
     <Compile Include="Persistence\RentKind.cs" />
-    <Compile Include="Persistence\Unit.cs" />
+    <Compile Include="Persistence\_Unit.cs" />
     <Compile Include="Persistence\UnitKind.cs" />
     <Compile Include="Persistence\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -208,7 +208,7 @@
     <Compile Include="Repositories\IRealEstate.cs" />
     <Compile Include="Repositories\IRealEstateKind.cs" />
     <Compile Include="Repositories\IRentKind.cs" />
-    <Compile Include="Repositories\IUnit.cs" />
+    <Compile Include="Repositories\I_Unit.cs" />
     <Compile Include="Repositories\IUnitKind.cs" />
     <Compile Include="Repositories\IUnitOfWork.cs" />
     <Compile Include="Startup.cs" />

@@ -6,7 +6,7 @@ using System.Web.UI.WebControls;
 
 namespace PropertyManagement.Repositories
 {
-    public interface IUnit
+    public interface I_Unit
     {
         void Add(Unit ObjToSave);
         void Update(Unit ObjtToUpdate);

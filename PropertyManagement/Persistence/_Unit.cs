@@ -7,11 +7,11 @@ using System.Web;
 
 namespace PropertyManagement.Persistence
 {
-    public class Unit : IUnit
+    public class _Unit : I_Unit
     {
         private readonly ApplicationDbContext _context;
 
-        public Unit(ApplicationDbContext context)
+        public _Unit(ApplicationDbContext context)
         {
             _context = context;
         }
