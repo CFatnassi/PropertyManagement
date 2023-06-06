@@ -7,16 +7,16 @@ using System.Web;
 
 namespace PropertyManagement.Persistence
 {
-    public class _Unit : I_Unit
+    public class UnitRepo : IUnitRepo
     {
         private readonly ApplicationDbContext _context;
 
-        public _Unit(ApplicationDbContext context)
+        public UnitRepo(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        public void Add(Models.Unit ObjToSave)
+        public void Add(Models.Units ObjToSave)
         {
             _context.Units.Add(ObjToSave);
         }
@@ -30,12 +30,12 @@ namespace PropertyManagement.Persistence
             }
         }
 
-        public Models.Unit GetMyUnits(Guid guid)
+        public Models.Units GetMyUnits(Guid guid)
         {
             return _context.Units.FirstOrDefault(m => m.Guid == guid);
         }
 
-        public void Update(Models.Unit ObjtToUpdate)
+        public void Update(Models.Units ObjtToUpdate)
         {
             var D = _context.Units.FirstOrDefault(m => m.Guid == ObjtToUpdate.Guid);
             if (D != null)
@@ -48,6 +48,10 @@ namespace PropertyManagement.Persistence
 
 
             }
+        }
+        public IEnumerable<Models.Units> getAll()
+        {
+            return _context.Units.ToList();
         }
     }
 }

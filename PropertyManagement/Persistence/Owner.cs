@@ -50,5 +50,9 @@ namespace PropertyManagement.Persistence
 
             }
         }
+        public IEnumerable<Models.Owner> getAll()
+        {
+            return _context.Owners.ToList();
+        }
     }
 }

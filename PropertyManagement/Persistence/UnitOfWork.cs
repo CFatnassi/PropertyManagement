@@ -12,7 +12,7 @@ namespace PropertyManagement.Persistence
         private readonly ApplicationDbContext _context;
 
         public ICompany Company { get; private set; }
-        public I_Unit Unit { get; private set; }
+        public IUnitRepo Unit { get; private set; }
         public IOwner Owner { get; private set; }
         public IRealEstate RealEstate { get; private set; }
         public IRealEstateKind RealEstateKind { get; private set; }
@@ -25,7 +25,7 @@ namespace PropertyManagement.Persistence
             
             _context = context;
             Company = new Company(context);
-            Unit = new _Unit(context);
+            Unit = new UnitRepo(context);
             Owner = new Owner(context);
             RealEstate = new RealEstate(context);
             RealEstateKind = new RealEstateKind(context);

@@ -12,5 +12,7 @@ namespace PropertyManagement.Repositories
         void Update(UnitKind ObjtToUpdate);
         void Delete(int id);
         UnitKind GetMyUnitKind(int id);
+        IEnumerable<UnitKind> getAll();
+
     }
 }

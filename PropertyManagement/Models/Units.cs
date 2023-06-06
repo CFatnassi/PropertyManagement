@@ -5,7 +5,7 @@ using System.Web;
 
 namespace PropertyManagement.Models
 {
-    public class Unit
+    public class Units
     {
         public int Id { get; set; }
         public int FUnitKindId { get; set; }

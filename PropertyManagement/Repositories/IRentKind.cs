@@ -12,5 +12,7 @@ namespace PropertyManagement.Repositories
         void Update(RentKind ObjtToUpdate);
         void Delete(int id);
         RentKind GetMyRentKind(int id);
+        IEnumerable<RentKind> getAll();
+
     }
 }

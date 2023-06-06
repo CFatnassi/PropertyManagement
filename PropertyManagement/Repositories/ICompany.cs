@@ -10,8 +10,9 @@ namespace PropertyManagement.Repositories
     {
         void Add(Company ObjToSave);
         void Update(Company ObjtToUpdate);
-        void Delete(Guid guid);
-        Company GetMyCompany(Guid guid);
+        void Delete(Guid? guid);
+        Company GetMyCompany(Guid? guid);
+        IEnumerable<Company> getAll();
 
     }
 }

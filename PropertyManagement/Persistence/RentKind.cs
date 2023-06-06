@@ -45,5 +45,9 @@ namespace PropertyManagement.Persistence
                 D.Code = ObjtToUpdate.Code;             
             }
         }
+        public IEnumerable<Models.RentKind> getAll()
+        {
+            return _context.RentKinds.ToList();
+        }
     }
 }

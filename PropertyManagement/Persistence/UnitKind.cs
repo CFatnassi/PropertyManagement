@@ -48,5 +48,9 @@ namespace PropertyManagement.Persistence
 
             }
         }
+        public IEnumerable<Models.UnitKind> getAll()
+        {
+            return _context.UnitKinds.ToList();
+        }
     }
 }

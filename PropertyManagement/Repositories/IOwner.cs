@@ -12,5 +12,6 @@ namespace PropertyManagement.Repositories
         void Update(Owner ObjtToUpdate);
         void Delete(Guid guid);
         Owner GetMyOwner(Guid guid);
+        IEnumerable<Owner> getAll();
     }
 }
