@@ -12,5 +12,7 @@ namespace PropertyManagement.Repositories
         void Update(RealEstateKind ObjtToUpdate);
         void Delete(int id);
         RealEstateKind GetMyRealEstateKind(int id);
+        IEnumerable<RealEstateKind> getAll();
+
     }
 }

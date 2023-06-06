@@ -48,5 +48,9 @@ namespace PropertyManagement.Persistence
 
             }
         }
+        public IEnumerable<Models.RealEstateKind> getAll()
+        {
+            return _context.RealEstateKinds.ToList();
+        }
     }
 }

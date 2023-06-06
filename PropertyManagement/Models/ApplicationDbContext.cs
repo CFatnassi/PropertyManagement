@@ -10,7 +10,7 @@ namespace PropertyManagement.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
 
-        public DbSet<Company> Companys { get; set; }
+        public DbSet<Company> Companies { get; set; }
         public DbSet<Units> Units { get; set; }
         public DbSet<RealEstate> RealEstates { get; set; }
         public DbSet<Owner> Owners { get; set; }

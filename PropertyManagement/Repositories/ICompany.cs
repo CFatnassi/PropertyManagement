@@ -13,6 +13,9 @@ namespace PropertyManagement.Repositories
         void Delete(Guid guid);
         Company GetMyCompany(Guid guid);
         IEnumerable<Company> GetAllCompany();
+        void Delete(Guid? guid);
+        Company GetMyCompany(Guid? guid);
+        IEnumerable<Company> getAll();
 
     }
 }

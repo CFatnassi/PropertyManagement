@@ -12,5 +12,6 @@ namespace PropertyManagement.Repositories
         void Update(RealEstate ObjtToUpdate);
         void Delete(Guid guid);
         RealEstate GetMyRealEstate(Guid guid);
+        IEnumerable<RealEstate> getAll();
     }
 }

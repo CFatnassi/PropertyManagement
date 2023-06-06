@@ -172,6 +172,12 @@
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OwnerController.cs" />
+    <Compile Include="Controllers\RealEstateController.cs" />
+    <Compile Include="Controllers\RealEstateKindController.cs" />
+    <Compile Include="Controllers\RentKindController.cs" />
+    <Compile Include="Controllers\UnitKindController.cs" />
+    <Compile Include="Controllers\UnitsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -181,6 +187,10 @@
     <Compile Include="Migrations\202305311402448_mod1.cs" />
     <Compile Include="Migrations\202305311402448_mod1.Designer.cs">
       <DependentUpon>202305311402448_mod1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202306050910285_cft1.cs" />
+    <Compile Include="Migrations\202306050910285_cft1.Designer.cs">
+      <DependentUpon>202306050910285_cft1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -212,6 +222,8 @@
     <Compile Include="Repositories\IUnitKind.cs" />
     <Compile Include="Repositories\IUnitOfWork.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\RealEstateView.cs" />
+    <Compile Include="ViewModels\UnitView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -272,6 +284,31 @@
     <Content Include="Views\Company\Index.cshtml" />
     <Content Include="Views\Company\Create.cshtml" />
     <Content Include="Views\Company\Delete.cshtml" />
+    <Content Include="Views\UnitKind\Index.cshtml" />
+    <Content Include="Views\UnitKind\Create.cshtml" />
+    <Content Include="Views\UnitKind\Edit.cshtml" />
+    <Content Include="Views\UnitKind\Delete.cshtml" />
+    <Content Include="Views\RentKind\Index.cshtml" />
+    <Content Include="Views\RentKind\Create.cshtml" />
+    <Content Include="Views\RentKind\Edit.cshtml" />
+    <Content Include="Views\RentKind\Delete.cshtml" />
+    <Content Include="Views\Company\Edit.cshtml" />
+    <Content Include="Views\RealEstateKind\Index.cshtml" />
+    <Content Include="Views\RealEstateKind\Create.cshtml" />
+    <Content Include="Views\RealEstateKind\Edit.cshtml" />
+    <Content Include="Views\RealEstateKind\Delete.cshtml" />
+    <Content Include="Views\Units\Index.cshtml" />
+    <Content Include="Views\Units\Create.cshtml" />
+    <Content Include="Views\Units\Edit.cshtml" />
+    <Content Include="Views\Units\Delete.cshtml" />
+    <Content Include="Views\RealEstate\Index.cshtml" />
+    <Content Include="Views\RealEstate\Create.cshtml" />
+    <Content Include="Views\RealEstate\Edit.cshtml" />
+    <Content Include="Views\RealEstate\Delete.cshtml" />
+    <Content Include="Views\Owner\Index.cshtml" />
+    <Content Include="Views\Owner\Create.cshtml" />
+    <Content Include="Views\Owner\Edit.cshtml" />
+    <Content Include="Views\Owner\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -293,6 +330,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202305311402448_mod1.resx">
       <DependentUpon>202305311402448_mod1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202306050910285_cft1.resx">
+      <DependentUpon>202306050910285_cft1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

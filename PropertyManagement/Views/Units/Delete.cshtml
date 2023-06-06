@@ -1,0 +1,89 @@
+﻿@model PropertyManagement.Models.Units
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Units</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FUnitKindId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FUnitKindId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Guid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Guid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FRealEstGuid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FRealEstGuid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NickName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NickName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AreaSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AreaSize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Room)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Room)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bathroom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bathroom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kitchen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kitchen)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm("Delete","Units")) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -21,8 +21,9 @@ namespace PropertyManagement.Controllers
         // GET: Company
         public ActionResult Index()
         {
-
-            return View();
+            IEnumerable<Models.Company> obj = new List<Models.Company>();
+            obj= _unitOfWork.Company.getAll();
+            return View(obj);
         }
 
         public ActionResult Create()
@@ -37,19 +38,33 @@ namespace PropertyManagement.Controllers
 
             return RedirectToAction("Index");
         }
-        public ActionResult Edit(Models.Company company)
-        {
-            _unitOfWork.Company.Update(company);
-            _unitOfWork.Complete();
 
-            return RedirectToAction("Index");
-        }
-        public ActionResult Delete(Guid guid)
+        public ActionResult Edit(Guid guid)
         {
+            Models.Company obj = _unitOfWork.Company.GetMyCompany(guid);
+            return View(obj);
+
+        }
+        [HttpPost]
+        public ActionResult Update(Models.Company obj)
+        {
+            Models.Company objToUpdate = _unitOfWork.Company.GetMyCompany(obj.Guid);
+            _unitOfWork.Company.Update(objToUpdate);
+           
+            _unitOfWork.Complete();
+            return RedirectToAction("Index");
+
+        }
+       
+        
+        public ActionResult Delete(Guid? guid)
+        {
+            Models.Company obj = _unitOfWork.Company.GetMyCompany(guid);
+            
             _unitOfWork.Company.Delete(guid);
             _unitOfWork.Complete();
+            return View(obj);
 
-            return View();
         }
 
     }

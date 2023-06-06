@@ -30,12 +30,12 @@ namespace PropertyManagement.Persistence
             }
         }
 
-        public Units GetMyUnits(Guid guid)
+        public Models.Units GetMyUnits(Guid guid)
         {
             return _context.Units.FirstOrDefault(m => m.Guid == guid);
         }
 
-        public void Update(Units ObjtToUpdate)
+        public void Update(Models.Units ObjtToUpdate)
         {
             var D = _context.Units.FirstOrDefault(m => m.Guid == ObjtToUpdate.Guid);
             if (D != null)
@@ -48,6 +48,10 @@ namespace PropertyManagement.Persistence
 
 
             }
+        }
+        public IEnumerable<Models.Units> getAll()
+        {
+            return _context.Units.ToList();
         }
     }
 }

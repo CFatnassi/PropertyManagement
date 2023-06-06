@@ -13,5 +13,7 @@ namespace PropertyManagement.Repositories
         void Update(Units ObjtToUpdate);
         void Delete(Guid guid);
         Units GetMyUnits(Guid guid);
+        IEnumerable<Units> getAll();
+
     }
 }

@@ -18,38 +18,42 @@ namespace PropertyManagement.Persistence
 
         public void Add(Models.Company ObjToSave)
         {
-            _context.Companys.Add(ObjToSave);
+            _context.Companies.Add(ObjToSave);
         }
 
-        public void Delete(Guid guid)
+        public void Delete(Guid? guid)
         {
-            var D = _context.Companys.FirstOrDefault(m => m.Guid == guid);
+            var D = _context.Companies.FirstOrDefault(m => m.Guid == guid);
             if (D != null)
             {
-                _context.Companys.Remove(D);
+                _context.Companies.Remove(D);
             }
         }
 
-        public IEnumerable<Models.Company> GetAllCompany()
+        public Models.Company GetMyCompany(Guid? guid)
         {
-            return _context.Companys.ToList();
+            return _context.Companies.FirstOrDefault(m => m.Guid == guid);
         }
-
-        public Models.Company GetMyCompany(Guid guid)
+        public IEnumerable<Models.Company> getAll()
         {
-            return _context.Companys.FirstOrDefault(m => m.Guid == guid);
+            return _context.Companies.ToList();
         }
 
         public void Update(Models.Company ObjtToUpdate)
         {
-            var D = _context.Companys.FirstOrDefault(m => m.Guid == ObjtToUpdate.Guid);
+            var D = _context.Companies.FirstOrDefault(m => m.Guid == ObjtToUpdate.Guid);
             if (D != null)
             {
+                D.Id = ObjtToUpdate.Id;
                 D.Name = ObjtToUpdate.Name;
-                D.Adress = ObjtToUpdate.Adress;
-                D.Country = ObjtToUpdate.Country;
                 D.Email = ObjtToUpdate.Email;
-             
+                D.Adress = ObjtToUpdate.Adress;
+                D.Guid = ObjtToUpdate.Guid;
+                D.Status = ObjtToUpdate.Status;
+                D.Logo = ObjtToUpdate.Logo;
+                D.Country = ObjtToUpdate.Country;
+                D.UserId = ObjtToUpdate.UserId;
+                D.CreateDate = ObjtToUpdate.CreateDate;            
 
             }
         }
