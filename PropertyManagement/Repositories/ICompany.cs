@@ -12,6 +12,7 @@ namespace PropertyManagement.Repositories
         void Update(Company ObjtToUpdate);
         void Delete(Guid guid);
         Company GetMyCompany(Guid guid);
+        IEnumerable<Company> GetAllCompany();
 
     }
 }

@@ -30,6 +30,11 @@ namespace PropertyManagement.Persistence
             }
         }
 
+        public IEnumerable<Models.Company> GetAllCompany()
+        {
+            return _context.Companys.ToList();
+        }
+
         public Models.Company GetMyCompany(Guid guid)
         {
             return _context.Companys.FirstOrDefault(m => m.Guid == guid);
