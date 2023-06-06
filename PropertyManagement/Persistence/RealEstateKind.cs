@@ -7,7 +7,7 @@ using System.Web;
 
 namespace PropertyManagement.Persistence
 {
-    public class RealEstateKind : IRealEstateKind
+    public class RealEstateKind : IRealEstateKindRepo
     {
         private readonly ApplicationDbContext _context;
 

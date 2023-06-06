@@ -6,7 +6,7 @@ using System.Web;
 
 namespace PropertyManagement.Repositories
 {
-    public interface IRealEstateKind
+    public interface IRealEstateKindRepo
     {
         void Add(RealEstateKind ObjToSave);
         void Update(RealEstateKind ObjtToUpdate);

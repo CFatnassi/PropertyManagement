@@ -22,7 +22,7 @@ namespace PropertyManagement.Controllers
         public ActionResult Index()
         {
             IEnumerable<Models.Company> obj = new List<Models.Company>();
-            obj= _unitOfWork.Company.getAll();
+            obj= _unitOfWork.Company.GetAllCompany();
             return View(obj);
         }
 
@@ -57,7 +57,7 @@ namespace PropertyManagement.Controllers
         }
        
         
-        public ActionResult Delete(Guid? guid)
+        public ActionResult Delete(Guid guid)
         {
             Models.Company obj = _unitOfWork.Company.GetMyCompany(guid);
             

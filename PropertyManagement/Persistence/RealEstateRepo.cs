@@ -7,11 +7,11 @@ using System.Web;
 
 namespace PropertyManagement.Persistence
 {
-    public class RealEstate : IRealEstate
+    public class RealEstateRepo : IRealEstateRepo
     {
         private readonly ApplicationDbContext _context;
 
-        public RealEstate(ApplicationDbContext context)
+        public RealEstateRepo(ApplicationDbContext context)
         {
             _context = context;
         }

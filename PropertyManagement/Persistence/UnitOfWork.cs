@@ -11,12 +11,12 @@ namespace PropertyManagement.Persistence
     {
         private readonly ApplicationDbContext _context;
 
-        public ICompany Company { get; private set; }
+        public ICompanyRepo Company { get; private set; }
         public IUnitRepo Unit { get; private set; }
-        public IOwner Owner { get; private set; }
-        public IRealEstate RealEstate { get; private set; }
-        public IRealEstateKind RealEstateKind { get; private set; }
-        public IRentKind RentKind { get; private set; }
+        public IOwnerRepo Owner { get; private set; }
+        public IRealEstateRepo RealEstate { get; private set; }
+        public IRealEstateKindRepo RealEstateKind { get; private set; }
+        public IRentKindRepo RentKind { get; private set; }
         public IUnitKind UnitKind { get; private set; }
         
         
@@ -24,13 +24,13 @@ namespace PropertyManagement.Persistence
         {
             
             _context = context;
-            Company = new Company(context);
+            Company = new CompanyRepo(context);
             Unit = new UnitRepo(context);
-            Owner = new Owner(context);
-            RealEstate = new RealEstate(context);
+            Owner = new OwnerRepo(context);
+            RealEstate = new RealEstateRepo(context);
             RealEstateKind = new RealEstateKind(context);
-            UnitKind = new UnitKind(context);
-            RentKind = new RentKind(context);
+            UnitKind = new UnitKindRepo(context);
+            RentKind = new RentKindRepo(context);
 
         }
 

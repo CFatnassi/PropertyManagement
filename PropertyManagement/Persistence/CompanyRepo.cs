@@ -7,21 +7,21 @@ using System.Web;
 
 namespace PropertyManagement.Persistence
 {
-    public class Company : ICompany
+    public class CompanyRepo : ICompanyRepo
     {
         private readonly ApplicationDbContext _context;
 
-        public Company (ApplicationDbContext context)
+        public CompanyRepo(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        public void Add(Models.Company ObjToSave)
+        public void Add( Company ObjToSave)
         {
             _context.Companies.Add(ObjToSave);
         }
 
-        public void Delete(Guid? guid)
+        public void Delete(Guid  guid)
         {
             var D = _context.Companies.FirstOrDefault(m => m.Guid == guid);
             if (D != null)
@@ -30,16 +30,16 @@ namespace PropertyManagement.Persistence
             }
         }
 
-        public Models.Company GetMyCompany(Guid? guid)
+        public  Company GetMyCompany(Guid guid)
         {
             return _context.Companies.FirstOrDefault(m => m.Guid == guid);
         }
-        public IEnumerable<Models.Company> getAll()
+        public IEnumerable<Company> GetAllCompany()
         {
             return _context.Companies.ToList();
         }
 
-        public void Update(Models.Company ObjtToUpdate)
+        public void Update( Company ObjtToUpdate)
         {
             var D = _context.Companies.FirstOrDefault(m => m.Guid == ObjtToUpdate.Guid);
             if (D != null)

@@ -6,7 +6,7 @@ using System.Web;
 
 namespace PropertyManagement.Repositories
 {
-    public interface IRentKind
+    public interface IRentKindRepo
     {
         void Add(RentKind ObjToSave);
         void Update(RentKind ObjtToUpdate);

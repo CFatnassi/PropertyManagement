@@ -6,16 +6,16 @@ using System.Web;
 
 namespace PropertyManagement.Repositories
 {
-    public interface ICompany
+    public interface ICompanyRepo
     {
         void Add(Company ObjToSave);
         void Update(Company ObjtToUpdate);
         void Delete(Guid guid);
         Company GetMyCompany(Guid guid);
         IEnumerable<Company> GetAllCompany();
-        void Delete(Guid? guid);
-        Company GetMyCompany(Guid? guid);
-        IEnumerable<Company> getAll();
+     
+        
+        
 
     }
 }

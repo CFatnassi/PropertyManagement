@@ -7,12 +7,12 @@ namespace PropertyManagement.Repositories
 {
     public interface IUnitOfWork
     {
-         ICompany Company { get;}
+         ICompanyRepo Company { get;}
         IUnitRepo Unit { get; }
-        IOwner Owner { get;}
-         IRealEstate RealEstate { get;}
-         IRealEstateKind RealEstateKind { get;}
-         IRentKind RentKind { get;}
+        IOwnerRepo Owner { get;}
+         IRealEstateRepo RealEstate { get;}
+         IRealEstateKindRepo RealEstateKind { get;}
+         IRentKindRepo RentKind { get;}
          IUnitKind UnitKind { get;}
 
 

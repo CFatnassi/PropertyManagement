@@ -6,12 +6,12 @@ using System.Web;
 
 namespace PropertyManagement.Repositories
 {
-    public interface IRealEstate
+    public interface IOwnerRepo
     {
-        void Add(RealEstate ObjToSave);
-        void Update(RealEstate ObjtToUpdate);
+        void Add(Owner ObjToSave);
+        void Update(Owner ObjtToUpdate);
         void Delete(Guid guid);
-        RealEstate GetMyRealEstate(Guid guid);
-        IEnumerable<RealEstate> getAll();
+        Owner GetMyOwner(Guid guid);
+        IEnumerable<Owner> getAll();
     }
 }

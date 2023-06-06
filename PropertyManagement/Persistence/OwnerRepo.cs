@@ -7,11 +7,11 @@ using System.Web;
 
 namespace PropertyManagement.Persistence
 {
-    public class Owner : IOwner
+    public class OwnerRepo : IOwnerRepo
     {
         private readonly ApplicationDbContext _context;
 
-        public Owner(ApplicationDbContext context)
+        public OwnerRepo(ApplicationDbContext context)
         {
             _context = context;
         }
