@@ -225,6 +225,9 @@
   <data name="CreateNewCompany" xml:space="preserve">
     <value>Create New Company</value>
   </data>
+  <data name="CreateNewKind" xml:space="preserve">
+    <value>Create New Kind</value>
+  </data>
   <data name="CreateNewUser" xml:space="preserve">
     <value>Create New User</value>
   </data>

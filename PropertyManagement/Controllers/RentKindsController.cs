@@ -31,7 +31,7 @@ namespace PropertyManagement.Controllers
         {
             try
             {
-                var userId = User.Identity.GetUserId();
+                
 
                 var RentData = _unitOfWork.RentKind.getAll();
 
@@ -49,11 +49,6 @@ namespace PropertyManagement.Controllers
         {
             try
             {
-
-
-                var userId = User.Identity.GetUserId();
-
-
 
                 var RentKind = new RentKind();
 

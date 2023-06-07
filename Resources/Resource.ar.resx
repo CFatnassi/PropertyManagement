@@ -225,6 +225,9 @@
   <data name="CreateNewCompany" xml:space="preserve">
     <value>انشاء شركة جديد</value>
   </data>
+  <data name="CreateNewKind" xml:space="preserve">
+    <value>انشاء نوع جديد</value>
+  </data>
   <data name="CreateNewUser" xml:space="preserve">
     <value>تعريف مستخدم جديد</value>
   </data>

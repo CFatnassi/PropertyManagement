@@ -33,6 +33,10 @@
 
 
                 @Html.ValidationSummary(true, "Please Fix The Foloing Error!")
+
+                
+
+
                 <div class="form-group">
                     @Html.LabelFor(m => m.Code)*
                     @Html.TextBoxFor(m => m.Code, new { @id = "Code", @class = "form-control", @type = "number", @min = "1" })

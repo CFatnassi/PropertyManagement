@@ -475,6 +475,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create New Kind.
+        /// </summary>
+        public static string CreateNewKind {
+            get {
+                return ResourceManager.GetString("CreateNewKind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create New User.
         /// </summary>
         public static string CreateNewUser {
