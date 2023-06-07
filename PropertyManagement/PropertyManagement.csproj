@@ -171,6 +171,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CompaniesController.cs" />
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -178,6 +179,7 @@
     <Compile Include="Controllers\RealEstateController.cs" />
     <Compile Include="Controllers\RealEstateKindController.cs" />
     <Compile Include="Controllers\RentKindController.cs" />
+    <Compile Include="Controllers\RentKindsController.cs" />
     <Compile Include="Controllers\UnitKindController.cs" />
     <Compile Include="Controllers\UnitsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -19874,6 +19876,13 @@
     <Content Include="Scripts\umd\popper-utils.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
     <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Views\Shared\Layout_Login.cshtml" />
+    <Content Include="Views\Companies\Index.cshtml" />
+    <Content Include="Views\Companies\CreateNew.cshtml" />
+    <Content Include="Views\RentKinds\Index.cshtml" />
+    <Content Include="Views\RentKinds\CreateNew.cshtml" />
+    <Content Include="Views\RentKinds\Modify.cshtml" />
+    <Content Include="Views\RentKinds\Remove.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

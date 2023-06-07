@@ -144,6 +144,9 @@
   <data name="AddedSuccessfully" xml:space="preserve">
     <value>Added Successfully</value>
   </data>
+  <data name="AddNew" xml:space="preserve">
+    <value>Add New</value>
+  </data>
   <data name="All" xml:space="preserve">
     <value>All</value>
   </data>
@@ -152,6 +155,9 @@
   </data>
   <data name="ArbMsg" xml:space="preserve">
     <value>Arb Msg</value>
+  </data>
+  <data name="ArbName" xml:space="preserve">
+    <value>Arabic Name</value>
   </data>
   <data name="AreYouSure" xml:space="preserve">
     <value>Are You Sure ?</value>
@@ -167,6 +173,9 @@
   </data>
   <data name="Close" xml:space="preserve">
     <value>Close</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Code</value>
   </data>
   <data name="CoDomain" xml:space="preserve">
     <value>Company Domain</value>
@@ -279,6 +288,9 @@
   <data name="DeActivate" xml:space="preserve">
     <value>De Activate</value>
   </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
   <data name="Deleting" xml:space="preserve">
     <value>Deleting</value>
   </data>
@@ -302,6 +314,9 @@
   </data>
   <data name="EngMsg" xml:space="preserve">
     <value>Eng Msg</value>
+  </data>
+  <data name="EngName" xml:space="preserve">
+    <value>English Name</value>
   </data>
   <data name="First" xml:space="preserve">
     <value>First</value>
@@ -368,6 +383,9 @@
   </data>
   <data name="ModalDirX" xml:space="preserve">
     <value>modal-right</value>
+  </data>
+  <data name="Modify" xml:space="preserve">
+    <value>Modify</value>
   </data>
   <data name="MyLoginLog" xml:space="preserve">
     <value>My Login Logs</value>
@@ -446,6 +464,9 @@
   </data>
   <data name="RememberMe" xml:space="preserve">
     <value>Remember Me</value>
+  </data>
+  <data name="RentKind" xml:space="preserve">
+    <value>Rent Kind</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Save</value>

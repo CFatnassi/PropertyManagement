@@ -144,6 +144,9 @@
   <data name="AddedSuccessfully" xml:space="preserve">
     <value>تم الاضافة بنجاح</value>
   </data>
+  <data name="AddNew" xml:space="preserve">
+    <value>انشاء جديد</value>
+  </data>
   <data name="All" xml:space="preserve">
     <value>الكل</value>
   </data>
@@ -152,6 +155,9 @@
   </data>
   <data name="ArbMsg" xml:space="preserve">
     <value>رسالة عربي</value>
+  </data>
+  <data name="ArbName" xml:space="preserve">
+    <value>الاسم عربي</value>
   </data>
   <data name="AreYouSure" xml:space="preserve">
     <value>هل انت متأكد؟</value>
@@ -167,6 +173,9 @@
   </data>
   <data name="Close" xml:space="preserve">
     <value>اغلاق</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>الترميز</value>
   </data>
   <data name="CoDomain" xml:space="preserve">
     <value>الشركة</value>
@@ -279,6 +288,9 @@
   <data name="DeActivate" xml:space="preserve">
     <value>ايقاف</value>
   </data>
+  <data name="Delete" xml:space="preserve">
+    <value>الحذف</value>
+  </data>
   <data name="Deleting" xml:space="preserve">
     <value>جار الحذف</value>
   </data>
@@ -302,6 +314,9 @@
   </data>
   <data name="EngMsg" xml:space="preserve">
     <value>رسالة لاتيني</value>
+  </data>
+  <data name="EngName" xml:space="preserve">
+    <value>الاسم لاتينيط</value>
   </data>
   <data name="First" xml:space="preserve">
     <value>الأول</value>
@@ -371,6 +386,9 @@
   </data>
   <data name="ModalDirX" xml:space="preserve">
     <value>modal-left</value>
+  </data>
+  <data name="Modify" xml:space="preserve">
+    <value>تعديل</value>
   </data>
   <data name="MyLoginLog" xml:space="preserve">
     <value>سجل دخولي</value>
@@ -449,6 +467,9 @@
   </data>
   <data name="RememberMe" xml:space="preserve">
     <value>تذكرني</value>
+  </data>
+  <data name="RentKind" xml:space="preserve">
+    <value>نوع الايجار</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>تخزين</value>

@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../images/favicon.ico">
+    <title>SeniorsSoft</title>
+    <!-- Vendors Style-->
+    <link rel="stylesheet" href="../src/css/vendors_css.css">
+    <!-- Style-->
+    <link rel="stylesheet" href="../src/css/horizontal-menu.css">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/skin_color.css">
+</head>
+<body class="hold-transition theme-primary bg-img" style="background-image: url(../images/auth-bg/Polygon_Luminary.svg)">
+    <div class="col-12 " dir="rtl">
+        <div class="d-flex justify-content-end" style="margin:10px;">
+
+            <a class="logo">
+
+
+                <div class="logo-lg">
+                    <span class="light-logo fs-36 fw-700">Seniors<span class="text-primary">Soft </span></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="container h-p100">
+        <div class="row align-items-center justify-content-md-center h-p100">
+            <div class="col-12">
+                <div class="row justify-content-center g-0">
+                    <div class="col-lg-5 col-md-5 col-12">
+                        <div class="bg-white rounded10 shadow-lg">
+                            <div class="content-top-agile p-20 pb-0">
+                                <h2 class="text-primary">@Resources.Resource.LetsGetStarted</h2>
+                                <p class="mb-0">@Resources.Resource.SignintoSeniorsSoft</p>
+                            </div>
+                            <div class="p-40">
+                                @RenderBody()
+                              
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Vendor JS -->
+    <script src="../src/js/vendors.min.js"></script>
+    <script src="../src/js/pages/chat-popup.js"></script>
+    <script src="../assets/icons/feather-icons/feather.min.js"></script>
+    @RenderSection("scripts", required: false)
+
+
+ 
+</body>
+</html>

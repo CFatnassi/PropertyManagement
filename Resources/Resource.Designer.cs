@@ -142,6 +142,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add New.
+        /// </summary>
+        public static string AddNew {
+            get {
+                return ResourceManager.GetString("AddNew", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All.
         /// </summary>
         public static string All {
@@ -165,6 +174,15 @@ namespace Resources {
         public static string ArbMsg {
             get {
                 return ResourceManager.GetString("ArbMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Arabic Name.
+        /// </summary>
+        public static string ArbName {
+            get {
+                return ResourceManager.GetString("ArbName", resourceCulture);
             }
         }
         
@@ -300,6 +318,15 @@ namespace Resources {
         public static string Close {
             get {
                 return ResourceManager.GetString("Close", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Code.
+        /// </summary>
+        public static string Code {
+            get {
+                return ResourceManager.GetString("Code", resourceCulture);
             }
         }
         
@@ -547,6 +574,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string Delete {
+            get {
+                return ResourceManager.GetString("Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Deleting.
         /// </summary>
         public static string Deleting {
@@ -615,6 +651,15 @@ namespace Resources {
         public static string EngMsg {
             get {
                 return ResourceManager.GetString("EngMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to English Name.
+        /// </summary>
+        public static string EngName {
+            get {
+                return ResourceManager.GetString("EngName", resourceCulture);
             }
         }
         
@@ -813,6 +858,15 @@ namespace Resources {
         public static string ModalDirX {
             get {
                 return ResourceManager.GetString("ModalDirX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Modify.
+        /// </summary>
+        public static string Modify {
+            get {
+                return ResourceManager.GetString("Modify", resourceCulture);
             }
         }
         
@@ -1047,6 +1101,15 @@ namespace Resources {
         public static string RememberMe {
             get {
                 return ResourceManager.GetString("RememberMe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rent Kind.
+        /// </summary>
+        public static string RentKind {
+            get {
+                return ResourceManager.GetString("RentKind", resourceCulture);
             }
         }
         
