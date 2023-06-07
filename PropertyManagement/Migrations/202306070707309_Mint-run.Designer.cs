@@ -6,14 +6,14 @@ namespace PropertyManagement.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class mod1 : IMigrationMetadata
+    [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
+    public sealed partial class Mintrun : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(mod1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Mintrun));
         
         string IMigrationMetadata.Id
         {
-            get { return "202305311402448_mod1"; }
+            get { return "202306070707309_Mint-run"; }
         }
         
         string IMigrationMetadata.Source

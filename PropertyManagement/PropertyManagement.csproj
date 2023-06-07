@@ -186,13 +186,9 @@
     <Compile Include="Helpers\CultureHelper.cs" />
     <Compile Include="Helpers\MsgCode.cs" />
     <Compile Include="Helpers\MsgUnit.cs" />
-    <Compile Include="Migrations\202305311402448_mod1.cs" />
-    <Compile Include="Migrations\202305311402448_mod1.Designer.cs">
-      <DependentUpon>202305311402448_mod1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202306050910285_cft1.cs" />
-    <Compile Include="Migrations\202306050910285_cft1.Designer.cs">
-      <DependentUpon>202306050910285_cft1.cs</DependentUpon>
+    <Compile Include="Migrations\202306070707309_Mint-run.cs" />
+    <Compile Include="Migrations\202306070707309_Mint-run.Designer.cs">
+      <DependentUpon>202306070707309_Mint-run.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -19897,14 +19893,6 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202305311402448_mod1.resx">
-      <DependentUpon>202305311402448_mod1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202306050910285_cft1.resx">
-      <DependentUpon>202306050910285_cft1.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <TypeScriptCompile Include="assets\vendor_components\moment\moment.d.ts" />
     <TypeScriptCompile Include="assets\vendor_components\perfect-scrollbar-master\types\perfect-scrollbar.d.ts" />
     <TypeScriptCompile Include="Scripts\index.d.ts" />
@@ -19918,6 +19906,11 @@
       <Project>{3d06a660-57e7-40b4-930e-b7236cdc1919}</Project>
       <Name>Resources</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202306070707309_Mint-run.resx">
+      <DependentUpon>202306070707309_Mint-run.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
