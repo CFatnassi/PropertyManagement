@@ -1,0 +1,385 @@
+﻿.btn-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important
+}
+
+.btnSearch {
+    background-color: #D16587 !important
+}
+
+.btnEmail {
+    background-color: #008B8B !important;
+}
+
+.btnExport {
+    background-color: #E41B17 !important
+}
+
+.btnFav {
+    background-color: #382D2C !important;
+}
+
+.btnDetail {
+    transition-duration: 0.4s;
+}
+
+    .btnDetail:hover {
+        background-color: white !important;
+        border: 1px solid #D16587 !important;
+    }
+
+.btnDetail {
+    background-color: #D16587 !important
+}
+
+.btnDelete-lg {
+    transition-duration: 0.4s;
+}
+
+.btnDelete-lg {
+    background-color: #E41B17 !important;
+}
+
+.btnDelete {
+    transition-duration: 0.4s;
+}
+
+    .btnDelete:hover {
+        background-color: white !important;
+        border: 1px solid #E41B17 !important;
+    }
+
+.btnDelete {
+    background-color: #E41B17 !important
+}
+
+.btnAttach {
+    transition-duration: 0.4s;
+}
+
+
+    .btnAttach:hover {
+        background-color: white !important;
+        border: 1px solid #382D2C !important;
+    }
+
+.btnAttach {
+    background-color: #382D2C !important
+}
+
+
+.btnFreez {
+    transition-duration: 0.4s;
+}
+
+
+    .btnFreez:hover {
+        background-color: white !important;
+        border: 1px solid #E41B17 !important;
+    }
+
+.btnFreez {
+    background-color: #E41B17 !important
+}
+
+thead {
+    background-color: #34495E !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt !important;
+}
+
+th {
+    color: white !important;
+}
+
+.dxgvControl_iOS td.dxgvBatchEditModifiedCell_iOS {
+    background: #d4d4d4 !important;
+    color: black !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 11pt !important;
+}
+
+.dxgvHeader_iOS {
+    background-color: #34495E !important;
+    color: white !important;
+    padding: 11px 20px !important;
+}
+
+.dxgvFocusedRow_iOS, .dxgvFocusedRow_iOS.dxgvDataRowHover_iOS {
+    background: #d4d4d4 !important;
+    color: black !important;
+}
+
+.dxgvDataRow_iOS td.dxgv {
+    padding: 11px 10px !important;
+}
+
+.dxgvBatchEditNewItem_iOS {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt !important;
+}
+
+.dxgvControl_iOS {
+    width: 100% !important;
+}
+
+.panel-body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+.panel-footer {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+.panel-title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+.dt-button {
+    display: none !important;
+}
+
+#OtherExpensesGrid_DXHeadersRow0 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt;
+}
+
+#OtherExpensesGrid_col0 {
+    width: 55px !important;
+}
+
+#ExpensesGrid_DXHeadersRow0 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt !important;
+}
+
+#ExpensesGrid_col0 {
+    width: 55px !important;
+}
+
+#TransActionGrid_DXHeadersRow0 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt !important;
+}
+
+#TransActionGrid_col0 {
+    width: 55px !important;
+}
+
+#MemberShipTypeBody1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+.modal-body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+.modal-footer {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+.modal-title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+#ChartOfAccountList_H {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt !important;
+}
+
+#ChartOfAccountList_D {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt !important;
+}
+
+.HeaderStyle {
+    color: black !important;
+}
+
+#PapersGrid_DXHeadersRow0 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt;
+}
+
+#PapersGrid_col0 {
+    width: 55px !important;
+}
+
+#TempRevenueGrid_DXHeadersRow0 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt !important;
+}
+
+#TempRevenueGrid_col0 {
+    width: 55px !important;
+}
+
+#TempPrepaidGrid_DXHeadersRow0 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt !important;
+}
+
+#TempPrepaidGrid_col0 {
+    width: 55px !important;
+}
+
+#GridView_DXHeadersRow0 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt !important;
+}
+
+#GridView_DXFilterRow {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt !important;
+}
+
+.dxgvFooter_iOS {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt !important;
+}
+
+#PivotGrid_MTD {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt !important;
+}
+
+#PivotGrid_ACCFilterArea {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt !important;
+}
+
+#PivotGrid {
+    width: 100% !important;
+}
+
+#PivotGrid_PT {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt !important;
+}
+
+#ServiceBillGridView_DXHeadersRow0 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10px !important;
+}
+
+#ItemsGrid_DXHeadersRow0 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt !important;
+}
+
+#ItemsGrid_col0 {
+    width: 55px !important;
+}
+
+#SimilarItemGrid_DXHeadersRow0 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt !important;
+}
+
+#SimilarItemGrid_col0 {
+    width: 55px !important;
+}
+
+#AlternativeItemGrid_DXHeadersRow0 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt;
+}
+
+#AlternativeItemGrid_col0 {
+    width: 55px;
+}
+
+#Offer1ItemGrid_DXHeadersRow0 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt !important;
+}
+
+#Offer1ItemGrid_col0 {
+    width: 55px !important;
+}
+
+#Offer2ItemGrid_DXHeadersRow0 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt !important;
+}
+
+#Offer2ItemGrid_col0 {
+    width: 55px !important;
+}
+
+#OtherUnitItemGrid_DXHeadersRow0 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt !important;
+}
+
+#OtherUnitItemGrid_col0 {
+    width: 55px !important;
+}
+
+#RelatedItemGrid_DXHeadersRow0 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt !important;
+}
+
+#RelatedItemGrid_col0 {
+    width: 55px !important;
+}
+
+#ManufacturingStageGrid_DXHeadersRow0 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt !important;
+}
+
+#ParcelsItemGrid_DXHeadersRow0 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt !important;
+}
+
+#RawMaterialGrid_DXHeadersRow0 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt !important;
+}
+
+#RawMaterialGrid_col0 {
+    width: 55px !important;
+}
+#BillsGrid_DXHeadersRow0 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 10pt !important;
+}
+#BillsGrid_col0 {
+    width: 55px !important;
+}
+table.dataTable thead .sorting::after, table.dataTable thead .sorting_asc::after, table.dataTable thead .sorting_desc::after {
+    display: none !important;
+}
+div.dataTables_processing {
+    z-index: 1 !important;
+    height: 75px !important;
+    margin: auto;
+}
+
+.spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    border-top-color: #333;
+    animation: spinner .6s linear infinite;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+dataTables_processing {
+    z-index: 1 !important;
+}
