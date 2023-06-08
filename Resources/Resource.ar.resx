@@ -465,6 +465,9 @@
   <data name="Previous" xml:space="preserve">
     <value>السابق</value>
   </data>
+  <data name="RealEstateKind" xml:space="preserve">
+    <value>نوع العقار</value>
+  </data>
   <data name="Remaining" xml:space="preserve">
     <value>متبقي</value>
   </data>

@@ -18626,10 +18626,6 @@
     <Content Include="Views\RentKind\Edit.cshtml" />
     <Content Include="Views\RentKind\Delete.cshtml" />
     <Content Include="Views\Company\Edit.cshtml" />
-    <Content Include="Views\RealEstateKind\Index.cshtml" />
-    <Content Include="Views\RealEstateKind\Create.cshtml" />
-    <Content Include="Views\RealEstateKind\Edit.cshtml" />
-    <Content Include="Views\RealEstateKind\Delete.cshtml" />
     <Content Include="Views\Units\Index.cshtml" />
     <Content Include="Views\Units\Create.cshtml" />
     <Content Include="Views\Units\Edit.cshtml" />
@@ -19883,6 +19879,10 @@
     <Content Include="Views\RentKinds\CreateNew.cshtml" />
     <Content Include="Views\RentKinds\Modify.cshtml" />
     <Content Include="Views\RentKinds\Remove.cshtml" />
+    <Content Include="Views\RealEstateKind\CreateNew.cshtml" />
+    <Content Include="Views\RealEstateKind\Index.cshtml" />
+    <Content Include="Views\RealEstateKind\Modify.cshtml" />
+    <Content Include="Views\RealEstateKind\Remove.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

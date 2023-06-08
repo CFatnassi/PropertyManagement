@@ -1,0 +1,86 @@
+﻿@model PropertyManagement.Models.RealEstateKind
+@{
+
+}
+
+<style>
+    .modal-header {
+        background-color: #3ea7ed !important;
+    }
+
+    .modal-title {
+        color: white !important;
+    }
+
+    .close {
+        color: white !important;
+    }
+</style>
+
+
+<div id="myModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: block;">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h5 class="modal-title" id="myModalLabel">
+                    @Resources.Resource.Modify
+
+                </h5>
+            </div>
+            <div class="modal-body">
+
+
+                @Html.ValidationSummary(true, "Please Fix The Foloing Error!")
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Id)
+                    @Html.TextBoxFor(m => m.Code, new { @id = "Id", @class = "form-control", @type = "number", @min = "1", @readonly = "readonly" })
+                    @Html.ValidationMessageFor(m => m.Id)
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Code)*
+                    @Html.TextBoxFor(m => m.Code, new { @id = "Code", @class = "form-control", @type = "number", @min = "1", @readonly = "readonly" })
+                    @Html.ValidationMessageFor(m => m.Code)
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ArName)*
+                    @Html.TextBoxFor(m => m.ArName, new { @id = "ArName", @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.ArName)
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.EngName)
+                    @Html.TextBoxFor(m => m.EngName, new { @id = "EngName", @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.EngName)
+                </div>
+            </div>
+            <div class="modal-footer">
+
+
+
+                <button type="submit" class="waves-effect waves-light btn btn-info mb-5 fa fa-pencil add-new" id="update"> @Resources.Resource.Save </button>
+
+
+                <button type="button" class="waves-effect waves-light btn btn-default mb-5 fa fa-power-off" data-bs-dismiss="modal">  @Resources.Resource.Close</button>
+
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

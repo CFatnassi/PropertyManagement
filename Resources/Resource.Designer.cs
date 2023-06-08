@@ -1096,6 +1096,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Real Estate Kind.
+        /// </summary>
+        public static string RealEstateKind {
+            get {
+                return ResourceManager.GetString("RealEstateKind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Remaining.
         /// </summary>
         public static string Remaining {

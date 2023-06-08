@@ -462,6 +462,9 @@
   <data name="Previous" xml:space="preserve">
     <value>Previous</value>
   </data>
+  <data name="RealEstateKind" xml:space="preserve">
+    <value>Real Estate Kind</value>
+  </data>
   <data name="Remaining" xml:space="preserve">
     <value>Remaining</value>
   </data>
