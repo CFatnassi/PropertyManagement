@@ -546,6 +546,9 @@
   <data name="TimeAttend" xml:space="preserve">
     <value>نظام ادارة الحضور والانصراف</value>
   </data>
+  <data name="UnitKind" xml:space="preserve">
+    <value>نوع الوحدة</value>
+  </data>
   <data name="Update" xml:space="preserve">
     <value>تحديث</value>
   </data>

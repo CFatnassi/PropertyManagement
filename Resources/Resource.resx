@@ -540,6 +540,9 @@
   <data name="TimeAttend" xml:space="preserve">
     <value>Time Attendance System</value>
   </data>
+  <data name="UnitKind" xml:space="preserve">
+    <value>Unit Kind</value>
+  </data>
   <data name="Update" xml:space="preserve">
     <value>Update</value>
   </data>

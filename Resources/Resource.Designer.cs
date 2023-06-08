@@ -1330,6 +1330,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unit Kind.
+        /// </summary>
+        public static string UnitKind {
+            get {
+                return ResourceManager.GetString("UnitKind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Update.
         /// </summary>
         public static string Update {
