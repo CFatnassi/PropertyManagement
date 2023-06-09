@@ -147,6 +147,9 @@
   <data name="AddNew" xml:space="preserve">
     <value>انشاء جديد</value>
   </data>
+  <data name="Adress" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
   <data name="All" xml:space="preserve">
     <value>الكل</value>
   </data>
@@ -159,8 +162,14 @@
   <data name="ArbName" xml:space="preserve">
     <value>الاسم عربي</value>
   </data>
+  <data name="AreaSize" xml:space="preserve">
+    <value>مساحة الوحدة</value>
+  </data>
   <data name="AreYouSure" xml:space="preserve">
     <value>هل انت متأكد؟</value>
+  </data>
+  <data name="Bathroom" xml:space="preserve">
+    <value>حمام</value>
   </data>
   <data name="BroadCast" xml:space="preserve">
     <value>تعميم</value>
@@ -178,6 +187,12 @@
     <value>الترميز</value>
   </data>
   <data name="CoDomain" xml:space="preserve">
+    <value>الشركة</value>
+  </data>
+  <data name="CoGuid" xml:space="preserve">
+    <value>Guid الشركة</value>
+  </data>
+  <data name="Company" xml:space="preserve">
     <value>الشركة</value>
   </data>
   <data name="CompanyActiveSys" xml:space="preserve">
@@ -221,6 +236,13 @@
   </data>
   <data name="ContStartDate" xml:space="preserve">
     <value>بداية العقد</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>البلد</value>
+  </data>
+  <data name="CreateDate" xml:space="preserve">
+    <value>
+تاريخ الإنشاء</value>
   </data>
   <data name="CreateNewCompany" xml:space="preserve">
     <value>انشاء شركة جديد</value>
@@ -297,6 +319,9 @@
   <data name="Deleting" xml:space="preserve">
     <value>جار الحذف</value>
   </data>
+  <data name="Details" xml:space="preserve">
+    <value>تفاصيل</value>
+  </data>
   <data name="Dir" xml:space="preserve">
     <value>rtl</value>
   </data>
@@ -333,6 +358,21 @@
   <data name="ForSupport1" xml:space="preserve">
     <value>للدعم والملاحظات يرجي التواصل معنا عن طريق</value>
   </data>
+  <data name="FRealEstGuid" xml:space="preserve">
+    <value>العقار guid </value>
+  </data>
+  <data name="FREKId" xml:space="preserve">
+    <value>Id نوع العقار</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>الإسم الكامل</value>
+  </data>
+  <data name="FUnitKindId" xml:space="preserve">
+    <value>نوع الوحدة</value>
+  </data>
+  <data name="Guid" xml:space="preserve">
+    <value>Guid</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>الرئيسية</value>
   </data>
@@ -345,6 +385,12 @@
   <data name="HummanResourece" xml:space="preserve">
     <value>نظام ادارة شؤون الموظفين</value>
   </data>
+  <data name="Id" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="IdentityID" xml:space="preserve">
+    <value>رقم الهوية</value>
+  </data>
   <data name="Info" xml:space="preserve">
     <value>إظهار _START_ إلى _END_ من أصل _TOTAL_ مدخل</value>
   </data>
@@ -356,6 +402,9 @@
   </data>
   <data name="Inventory" xml:space="preserve">
     <value>نظام ادارة المخزون</value>
+  </data>
+  <data name="Kitchen" xml:space="preserve">
+    <value>مطبخ</value>
   </data>
   <data name="Last" xml:space="preserve">
     <value>الأخير</value>
@@ -372,11 +421,17 @@
   <data name="LoadingMsg" xml:space="preserve">
     <value>جاي التحقق من بياناتك</value>
   </data>
+  <data name="Location" xml:space="preserve">
+    <value>الموقع</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>تسجيل الدخول</value>
   </data>
   <data name="LoginRecord" xml:space="preserve">
     <value>سجل الدخول</value>
+  </data>
+  <data name="Logo" xml:space="preserve">
+    <value>الشعار</value>
   </data>
   <data name="LogOff" xml:space="preserve">
     <value>تسجيل خروج</value>
@@ -399,6 +454,9 @@
   <data name="MyProfile" xml:space="preserve">
     <value>ملفي الشخصي</value>
   </data>
+  <data name="Name" xml:space="preserve">
+    <value>الإسم</value>
+  </data>
   <data name="New" xml:space="preserve">
     <value>جديد</value>
   </data>
@@ -407,6 +465,9 @@
   </data>
   <data name="Next" xml:space="preserve">
     <value>التالي</value>
+  </data>
+  <data name="NickName" xml:space="preserve">
+    <value>الاسم</value>
   </data>
   <data name="No" xml:space="preserve">
     <value>لا</value>
@@ -429,6 +490,9 @@
   <data name="OperationCompletedSuccessfully" xml:space="preserve">
     <value>تمت العمليه بنجاح</value>
   </data>
+  <data name="Owner" xml:space="preserve">
+    <value>المالك</value>
+  </data>
   <data name="Paid" xml:space="preserve">
     <value>المدفوع</value>
   </data>
@@ -443,6 +507,12 @@
   </data>
   <data name="PersonalInfo" xml:space="preserve">
     <value>البيانات الشخصية</value>
+  </data>
+  <data name="Phone1" xml:space="preserve">
+    <value>هاتف1</value>
+  </data>
+  <data name="Phone2" xml:space="preserve">
+    <value>هاتف2</value>
   </data>
   <data name="PleaseAddAPassword" xml:space="preserve">
     <value>الرجاء اضافة كلمة مرور</value>
@@ -465,6 +535,9 @@
   <data name="Previous" xml:space="preserve">
     <value>السابق</value>
   </data>
+  <data name="RealEstate" xml:space="preserve">
+    <value>عقار</value>
+  </data>
   <data name="RealEstateKind" xml:space="preserve">
     <value>نوع العقار</value>
   </data>
@@ -476,6 +549,9 @@
   </data>
   <data name="RentKind" xml:space="preserve">
     <value>نوع الايجار</value>
+  </data>
+  <data name="Room" xml:space="preserve">
+    <value>غرف</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>تخزين</value>
@@ -506,6 +582,9 @@
   </data>
   <data name="SortDescending" xml:space="preserve">
     <value>: تفعيل لترتيب العمود تنازلياً</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>الحالة</value>
   </data>
   <data name="Stop" xml:space="preserve">
     <value>ايقاف</value>
@@ -546,6 +625,12 @@
   <data name="TimeAttend" xml:space="preserve">
     <value>نظام ادارة الحضور والانصراف</value>
   </data>
+  <data name="Unit" xml:space="preserve">
+    <value>الوحدة</value>
+  </data>
+  <data name="UnitCount" xml:space="preserve">
+    <value>عدد الوحدات</value>
+  </data>
   <data name="UnitKind" xml:space="preserve">
     <value>نوع الوحدة</value>
   </data>
@@ -560,6 +645,9 @@
   </data>
   <data name="Updating" xml:space="preserve">
     <value>جاري التعديل</value>
+  </data>
+  <data name="UserId" xml:space="preserve">
+    <value>هوية المستخدم</value>
   </data>
   <data name="UserLogin" xml:space="preserve">
     <value>دخول مستخدم</value>

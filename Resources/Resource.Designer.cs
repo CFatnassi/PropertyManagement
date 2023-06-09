@@ -151,6 +151,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Adress.
+        /// </summary>
+        public static string Adress {
+            get {
+                return ResourceManager.GetString("Adress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All.
         /// </summary>
         public static string All {
@@ -187,11 +196,29 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to AreaSize.
+        /// </summary>
+        public static string AreaSize {
+            get {
+                return ResourceManager.GetString("AreaSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Are You Sure ?.
         /// </summary>
         public static string AreYouSure {
             get {
                 return ResourceManager.GetString("AreYouSure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bathroom.
+        /// </summary>
+        public static string Bathroom {
+            get {
+                return ResourceManager.GetString("Bathroom", resourceCulture);
             }
         }
         
@@ -340,6 +367,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Company Guid.
+        /// </summary>
+        public static string CoGuid {
+            get {
+                return ResourceManager.GetString("CoGuid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Company.
+        /// </summary>
+        public static string Company {
+            get {
+                return ResourceManager.GetString("Company", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Company Active System.
         /// </summary>
         public static string CompanyActiveSys {
@@ -462,6 +507,24 @@ namespace Resources {
         public static string ContStartDate {
             get {
                 return ResourceManager.GetString("ContStartDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Country.
+        /// </summary>
+        public static string Country {
+            get {
+                return ResourceManager.GetString("Country", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Creation Date.
+        /// </summary>
+        public static string CreateDate {
+            get {
+                return ResourceManager.GetString("CreateDate", resourceCulture);
             }
         }
         
@@ -601,6 +664,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string Details {
+            get {
+                return ResourceManager.GetString("Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
         public static string Dir {
@@ -700,6 +772,51 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Real-Estate Guid.
+        /// </summary>
+        public static string FRealEstGuid {
+            get {
+                return ResourceManager.GetString("FRealEstGuid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Real-Estate Kind Id.
+        /// </summary>
+        public static string FREKId {
+            get {
+                return ResourceManager.GetString("FREKId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full Name.
+        /// </summary>
+        public static string FullName {
+            get {
+                return ResourceManager.GetString("FullName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unit-Kind Id.
+        /// </summary>
+        public static string FUnitKindId {
+            get {
+                return ResourceManager.GetString("FUnitKindId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guid.
+        /// </summary>
+        public static string Guid {
+            get {
+                return ResourceManager.GetString("Guid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
         public static string Home {
@@ -736,6 +853,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Id.
+        /// </summary>
+        public static string Id {
+            get {
+                return ResourceManager.GetString("Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Identity.
+        /// </summary>
+        public static string IdentityID {
+            get {
+                return ResourceManager.GetString("IdentityID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Showing _START_ to _END_ of _TOTAL_ entries.
         /// </summary>
         public static string Info {
@@ -768,6 +903,15 @@ namespace Resources {
         public static string Inventory {
             get {
                 return ResourceManager.GetString("Inventory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kitchen.
+        /// </summary>
+        public static string Kitchen {
+            get {
+                return ResourceManager.GetString("Kitchen", resourceCulture);
             }
         }
         
@@ -817,6 +961,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Location.
+        /// </summary>
+        public static string Location {
+            get {
+                return ResourceManager.GetString("Location", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Login.
         /// </summary>
         public static string Login {
@@ -831,6 +984,15 @@ namespace Resources {
         public static string LoginRecord {
             get {
                 return ResourceManager.GetString("LoginRecord", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Logo.
+        /// </summary>
+        public static string Logo {
+            get {
+                return ResourceManager.GetString("Logo", resourceCulture);
             }
         }
         
@@ -898,6 +1060,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to New.
         /// </summary>
         public static string New {
@@ -921,6 +1092,15 @@ namespace Resources {
         public static string Next {
             get {
                 return ResourceManager.GetString("Next", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NickName.
+        /// </summary>
+        public static string NickName {
+            get {
+                return ResourceManager.GetString("NickName", resourceCulture);
             }
         }
         
@@ -988,6 +1168,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Owner.
+        /// </summary>
+        public static string Owner {
+            get {
+                return ResourceManager.GetString("Owner", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Paid.
         /// </summary>
         public static string Paid {
@@ -1029,6 +1218,24 @@ namespace Resources {
         public static string PersonalInfo {
             get {
                 return ResourceManager.GetString("PersonalInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phone1.
+        /// </summary>
+        public static string Phone1 {
+            get {
+                return ResourceManager.GetString("Phone1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phone2.
+        /// </summary>
+        public static string Phone2 {
+            get {
+                return ResourceManager.GetString("Phone2", resourceCulture);
             }
         }
         
@@ -1096,6 +1303,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Real-Estate.
+        /// </summary>
+        public static string RealEstate {
+            get {
+                return ResourceManager.GetString("RealEstate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Real Estate Kind.
         /// </summary>
         public static string RealEstateKind {
@@ -1128,6 +1344,15 @@ namespace Resources {
         public static string RentKind {
             get {
                 return ResourceManager.GetString("RentKind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Room.
+        /// </summary>
+        public static string Room {
+            get {
+                return ResourceManager.GetString("Room", resourceCulture);
             }
         }
         
@@ -1218,6 +1443,15 @@ namespace Resources {
         public static string SortDescending {
             get {
                 return ResourceManager.GetString("SortDescending", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Status.
+        /// </summary>
+        public static string Status {
+            get {
+                return ResourceManager.GetString("Status", resourceCulture);
             }
         }
         
@@ -1330,6 +1564,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unit.
+        /// </summary>
+        public static string Unit {
+            get {
+                return ResourceManager.GetString("Unit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unit-Count.
+        /// </summary>
+        public static string UnitCount {
+            get {
+                return ResourceManager.GetString("UnitCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unit Kind.
         /// </summary>
         public static string UnitKind {
@@ -1371,6 +1623,15 @@ namespace Resources {
         public static string Updating {
             get {
                 return ResourceManager.GetString("Updating", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User Id.
+        /// </summary>
+        public static string UserId {
+            get {
+                return ResourceManager.GetString("UserId", resourceCulture);
             }
         }
         

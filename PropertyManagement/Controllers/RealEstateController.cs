@@ -1,4 +1,5 @@
-﻿using PropertyManagement.Models;
+﻿using PropertyManagement.Helpers;
+using PropertyManagement.Models;
 using PropertyManagement.Persistence;
 using PropertyManagement.Repositories;
 using PropertyManagement.ViewModels;
@@ -10,6 +11,7 @@ using System.Web.Mvc;
 
 namespace PropertyManagement.Controllers
 {
+    [Authorize]
     public class RealEstateController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -21,45 +23,201 @@ namespace PropertyManagement.Controllers
         // GET: RealEstate
         public ActionResult Index()
         {
-            IEnumerable<Models.RealEstate> obj = new List<Models.RealEstate>();
-            obj = _unitOfWork.RealEstate.getAll();
-            return View(obj);
+            return View();
         }
-        public ActionResult Create()
+
+        [HttpGet]
+        public JsonResult GetRealEstate()
         {
-            IEnumerable<Models.RealEstateKind> kinds = new List<Models.RealEstateKind>();
-            kinds = _unitOfWork.RealEstateKind.getAll();
-            RealEstateView objRView = new RealEstateView()
+            try
             {
-                RealEstateKind = kinds,
-                RealEstateKindId = 0
 
-            };
 
-            return View(objRView);
-            
+                var RealEstateData = _unitOfWork.RealEstate.getAll();
+
+                return Json(RealEstateData, JsonRequestBehavior.AllowGet);
+            }
+            catch
+            {
+                return Json(new List<RentKind>(), JsonRequestBehavior.AllowGet);
+            }
+
         }
-        public ActionResult Save(Models.RealEstate RealEstate)
-        {
-            //MsgUnit msg = new MsgUnit();
-            _unitOfWork.RealEstate.Add(RealEstate);
-            _unitOfWork.Complete();
 
-            return RedirectToAction("Index");
+
+        public ActionResult CreateNew()
+        {
+            try
+            {
+
+                var RealEstate = new RealEstate();
+
+                return PartialView(RealEstate);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message.ToString();
+                return View("Error");
+            }
         }
-        public ActionResult Edit(Models.RealEstate RealEstate)
+        [HttpPost]
+        public JsonResult SaveNew(RealEstate ObjToSave)
         {
-            _unitOfWork.RealEstate.Update(RealEstate);
-            _unitOfWork.Complete();
+            MsgUnit Msg = new MsgUnit();
+            try
+            {
+                if (!ModelState.IsValid)
+                {
 
-            return View();
+                    string Err = " ";
+                    var errors = ModelState.Values.SelectMany(v => v.Errors);
+                    foreach (ModelError error in errors)
+                    {
+                        Err = Err + error.ErrorMessage + "  ";
+                    }
+
+                    Msg.Msg = Resources.Resource.SomthingWentWrong + " " + Err;
+                    Msg.Code = 0;
+                    return Json(Msg, JsonRequestBehavior.AllowGet);
+
+                }
+
+                _unitOfWork.RealEstate.Add(ObjToSave);
+                _unitOfWork.Complete();
+                Msg.Msg = Resources.Resource.AddedSuccessfully;
+                Msg.Code = 1;
+            }
+            catch (Exception ex)
+            {
+
+                Msg.Msg = Resources.Resource.SomthingWentWrong + " " + ex.Message.ToString();
+                Msg.Code = 0;
+
+            }
+
+            return Json(Msg, JsonRequestBehavior.AllowGet);
         }
-        public ActionResult Delete(Guid guid)
-        {
-            _unitOfWork.RealEstate.Delete(guid);
-            _unitOfWork.Complete();
 
-            return View();
+
+
+
+
+
+        public ActionResult Modify(Guid Id)
+        {
+            try
+            {
+
+                var RealEstateData = _unitOfWork.RealEstate.GetMyRealEstate(Id);
+
+                return PartialView(RealEstateData);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message.ToString();
+                return View("Error");
+            }
+        }
+        [HttpPost]
+        public JsonResult Update(RealEstate ObjToSave)
+        {
+            MsgUnit Msg = new MsgUnit();
+            try
+            {
+
+
+                if (!ModelState.IsValid)
+                {
+
+                    string Err = " ";
+                    var errors = ModelState.Values.SelectMany(v => v.Errors);
+                    foreach (ModelError error in errors)
+                    {
+                        Err = Err + error.ErrorMessage + "  ";
+                    }
+
+                    Msg.Msg = Resources.Resource.SomthingWentWrong + " " + Err;
+                    Msg.Code = 0;
+                    return Json(Msg, JsonRequestBehavior.AllowGet);
+
+                }
+
+                _unitOfWork.RealEstate.Update(ObjToSave);
+                _unitOfWork.Complete();
+                Msg.Msg = Resources.Resource.AddedSuccessfully;
+                Msg.Code = 1;
+            }
+            catch (Exception ex)
+            {
+
+                Msg.Msg = Resources.Resource.SomthingWentWrong + " " + ex.Message.ToString();
+                Msg.Code = 0;
+
+            }
+
+            return Json(Msg, JsonRequestBehavior.AllowGet);
+
+        }
+
+        public ActionResult Remove(Guid Id)
+        {
+            try
+            {
+
+                var RealEstateData = _unitOfWork.RealEstate.GetMyRealEstate(Id);
+
+                return PartialView(RealEstateData);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message.ToString();
+                return View("Error");
+            }
+        }
+        [HttpPost]
+        public JsonResult Delete(RealEstate ObjToSave)
+        {
+            MsgUnit Msg = new MsgUnit();
+            try
+            {
+
+
+                if (!ModelState.IsValid)
+                {
+
+                    string Err = " ";
+                    var errors = ModelState.Values.SelectMany(v => v.Errors);
+                    foreach (ModelError error in errors)
+                    {
+                        Err = Err + error.ErrorMessage + "  ";
+                    }
+
+                    Msg.Msg = Resources.Resource.SomthingWentWrong + " " + Err;
+                    Msg.Code = 0;
+                    return Json(Msg, JsonRequestBehavior.AllowGet);
+
+                }
+
+                _unitOfWork.RealEstate.Delete(ObjToSave.Guid);
+                _unitOfWork.Complete();
+                Msg.Msg = Resources.Resource.AddedSuccessfully;
+                Msg.Code = 1;
+            }
+            catch (Exception ex)
+            {
+
+                Msg.Msg = Resources.Resource.SomthingWentWrong + " " + ex.Message.ToString();
+                Msg.Code = 0;
+
+            }
+
+
+
+
+            return Json(Msg, JsonRequestBehavior.AllowGet);
+
+
+
         }
     }
 }

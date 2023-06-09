@@ -1,4 +1,5 @@
-﻿using PropertyManagement.Models;
+﻿using PropertyManagement.Helpers;
+using PropertyManagement.Models;
 using PropertyManagement.Persistence;
 using PropertyManagement.Repositories;
 using PropertyManagement.ViewModels;
@@ -10,6 +11,7 @@ using System.Web.Mvc;
 
 namespace PropertyManagement.Controllers
 {
+    [Authorize]
     public class UnitsController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -21,44 +23,210 @@ namespace PropertyManagement.Controllers
         // GET: Units
         public ActionResult Index()
         {
-            IEnumerable<Models.Units> obj = new List<Models.Units>();
-            obj = _unitOfWork.Unit.getAll();
-            return View(obj);
+            return View();
         }
-        public ActionResult Create()
+
+        [HttpGet]
+        public JsonResult GetUnits()
         {
-            IEnumerable<Models.UnitKind> kinds = new List<Models.UnitKind>();
-            kinds = _unitOfWork.UnitKind.getAll();
-            UnitView objRView = new UnitView()
+            try
             {
-                UnitKinds = kinds,
-                UnitKindId = 0
 
-            };
 
-            return View(objRView);
+                var UnitData = _unitOfWork.Unit.getAll();
+
+                return Json(UnitData, JsonRequestBehavior.AllowGet);
+            }
+            catch
+            {
+                return Json(new List<Units>(), JsonRequestBehavior.AllowGet);
+            }
+
         }
-        public ActionResult Save(Models.Units unit)
-        {
-            //MsgUnit msg = new MsgUnit();
-            _unitOfWork.Unit.Add(unit);
-            _unitOfWork.Complete();
 
-            return RedirectToAction("Index");
+
+        public ActionResult CreateNew()
+        {
+            try
+            {
+
+                var Unit = new Units();
+
+                return PartialView(Unit);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message.ToString();
+                return View("Error");
+            }
         }
-        public ActionResult Edit(Models.Units unit)
+        [HttpPost]
+        public JsonResult SaveNew(Units ObjToSave)
         {
-            _unitOfWork.Unit.Update(unit);
-            _unitOfWork.Complete();
+            MsgUnit Msg = new MsgUnit();
+            try
+            {
+                if (!ModelState.IsValid)
+                {
 
-            return View();
+                    string Err = " ";
+                    var errors = ModelState.Values.SelectMany(v => v.Errors);
+                    foreach (ModelError error in errors)
+                    {
+                        Err = Err + error.ErrorMessage + "  ";
+                    }
+
+                    Msg.Msg = Resources.Resource.SomthingWentWrong + " " + Err;
+                    Msg.Code = 0;
+                    return Json(Msg, JsonRequestBehavior.AllowGet);
+
+                }
+
+                _unitOfWork.Unit.Add(ObjToSave);
+                _unitOfWork.Complete();
+                Msg.Msg = Resources.Resource.AddedSuccessfully;
+                Msg.Code = 1;
+            }
+            catch (Exception ex)
+            {
+
+                Msg.Msg = Resources.Resource.SomthingWentWrong + " " + ex.Message.ToString();
+                Msg.Code = 0;
+
+            }
+
+            return Json(Msg, JsonRequestBehavior.AllowGet);
         }
-        public ActionResult Delete(Guid guid)
-        {
-            _unitOfWork.Unit.Delete(guid);
-            _unitOfWork.Complete();
 
-            return View();
+
+
+
+
+
+        public ActionResult Modify(Guid Id)
+        {
+            try
+            {
+
+                var UnitData = _unitOfWork.Unit.GetMyUnits(Id);
+
+                return PartialView(UnitData);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message.ToString();
+                return View("Error");
+            }
+        }
+        [HttpPost]
+        public JsonResult Update(Units ObjToSave)
+        {
+            MsgUnit Msg = new MsgUnit();
+            try
+            {
+
+
+                if (!ModelState.IsValid)
+                {
+
+                    string Err = " ";
+                    var errors = ModelState.Values.SelectMany(v => v.Errors);
+                    foreach (ModelError error in errors)
+                    {
+                        Err = Err + error.ErrorMessage + "  ";
+                    }
+
+                    Msg.Msg = Resources.Resource.SomthingWentWrong + " " + Err;
+                    Msg.Code = 0;
+                    return Json(Msg, JsonRequestBehavior.AllowGet);
+
+                }
+
+                _unitOfWork.Unit.Update(ObjToSave);
+                _unitOfWork.Complete();
+                Msg.Msg = Resources.Resource.AddedSuccessfully;
+                Msg.Code = 1;
+            }
+            catch (Exception ex)
+            {
+
+                Msg.Msg = Resources.Resource.SomthingWentWrong + " " + ex.Message.ToString();
+                Msg.Code = 0;
+
+            }
+
+
+
+
+            return Json(Msg, JsonRequestBehavior.AllowGet);
+
+
+
+        }
+
+
+
+
+
+        public ActionResult Remove(Guid Id)
+        {
+            try
+            {
+
+                var UnitData = _unitOfWork.Unit.GetMyUnits(Id);
+
+                return PartialView(UnitData);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message.ToString();
+                return View("Error");
+            }
+        }
+        [HttpPost]
+        public JsonResult Delete(Units ObjToSave)
+        {
+            MsgUnit Msg = new MsgUnit();
+            try
+            {
+
+
+                if (!ModelState.IsValid)
+                {
+
+                    string Err = " ";
+                    var errors = ModelState.Values.SelectMany(v => v.Errors);
+                    foreach (ModelError error in errors)
+                    {
+                        Err = Err + error.ErrorMessage + "  ";
+                    }
+
+                    Msg.Msg = Resources.Resource.SomthingWentWrong + " " + Err;
+                    Msg.Code = 0;
+                    return Json(Msg, JsonRequestBehavior.AllowGet);
+
+                }
+
+                _unitOfWork.Unit.Delete(ObjToSave.Guid);
+                _unitOfWork.Complete();
+                Msg.Msg = Resources.Resource.AddedSuccessfully;
+                Msg.Code = 1;
+            }
+            catch (Exception ex)
+            {
+
+                Msg.Msg = Resources.Resource.SomthingWentWrong + " " + ex.Message.ToString();
+                Msg.Code = 0;
+
+            }
+
+
+
+
+            return Json(Msg, JsonRequestBehavior.AllowGet);
+
+
+
         }
     }
 }

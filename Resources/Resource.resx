@@ -147,6 +147,9 @@
   <data name="AddNew" xml:space="preserve">
     <value>Add New</value>
   </data>
+  <data name="Adress" xml:space="preserve">
+    <value>Adress</value>
+  </data>
   <data name="All" xml:space="preserve">
     <value>All</value>
   </data>
@@ -159,8 +162,14 @@
   <data name="ArbName" xml:space="preserve">
     <value>Arabic Name</value>
   </data>
+  <data name="AreaSize" xml:space="preserve">
+    <value>AreaSize</value>
+  </data>
   <data name="AreYouSure" xml:space="preserve">
     <value>Are You Sure ?</value>
+  </data>
+  <data name="Bathroom" xml:space="preserve">
+    <value>Bathroom</value>
   </data>
   <data name="BroadCast" xml:space="preserve">
     <value>Broad Cast</value>
@@ -179,6 +188,12 @@
   </data>
   <data name="CoDomain" xml:space="preserve">
     <value>Company Domain</value>
+  </data>
+  <data name="CoGuid" xml:space="preserve">
+    <value>Company Guid</value>
+  </data>
+  <data name="Company" xml:space="preserve">
+    <value>Company</value>
   </data>
   <data name="CompanyActiveSys" xml:space="preserve">
     <value>Company Active System</value>
@@ -221,6 +236,12 @@
   </data>
   <data name="ContStartDate" xml:space="preserve">
     <value>Cont Start Date</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="CreateDate" xml:space="preserve">
+    <value>Creation Date</value>
   </data>
   <data name="CreateNewCompany" xml:space="preserve">
     <value>Create New Company</value>
@@ -297,6 +318,9 @@
   <data name="Deleting" xml:space="preserve">
     <value>Deleting</value>
   </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
   <data name="Dir" xml:space="preserve">
     <value />
   </data>
@@ -330,6 +354,21 @@
   <data name="ForSupport" xml:space="preserve">
     <value>For Support Please contact us :</value>
   </data>
+  <data name="FRealEstGuid" xml:space="preserve">
+    <value>Real-Estate Guid</value>
+  </data>
+  <data name="FREKId" xml:space="preserve">
+    <value>Real-Estate Kind Id</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>Full Name</value>
+  </data>
+  <data name="FUnitKindId" xml:space="preserve">
+    <value>Unit-Kind Id</value>
+  </data>
+  <data name="Guid" xml:space="preserve">
+    <value>Guid</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>Home</value>
   </data>
@@ -342,6 +381,12 @@
   <data name="HummanResourece" xml:space="preserve">
     <value>Human Resources System</value>
   </data>
+  <data name="Id" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="IdentityID" xml:space="preserve">
+    <value>Identity</value>
+  </data>
   <data name="Info" xml:space="preserve">
     <value>Showing _START_ to _END_ of _TOTAL_ entries</value>
   </data>
@@ -353,6 +398,9 @@
   </data>
   <data name="Inventory" xml:space="preserve">
     <value>Inventory System</value>
+  </data>
+  <data name="Kitchen" xml:space="preserve">
+    <value>Kitchen</value>
   </data>
   <data name="Last" xml:space="preserve">
     <value>Last</value>
@@ -369,11 +417,17 @@
   <data name="LoadingMsg" xml:space="preserve">
     <value>Checking your Data</value>
   </data>
+  <data name="Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Login</value>
   </data>
   <data name="LoginRecord" xml:space="preserve">
     <value>Login Record</value>
+  </data>
+  <data name="Logo" xml:space="preserve">
+    <value>Logo</value>
   </data>
   <data name="LogOff" xml:space="preserve">
     <value>Log Off</value>
@@ -396,6 +450,9 @@
   <data name="MyProfile" xml:space="preserve">
     <value>My Profile</value>
   </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
   <data name="New" xml:space="preserve">
     <value>New</value>
   </data>
@@ -404,6 +461,9 @@
   </data>
   <data name="Next" xml:space="preserve">
     <value>Next</value>
+  </data>
+  <data name="NickName" xml:space="preserve">
+    <value>NickName</value>
   </data>
   <data name="No" xml:space="preserve">
     <value>No</value>
@@ -426,6 +486,9 @@
   <data name="OperationCompletedSuccessfully" xml:space="preserve">
     <value>Operation Completed Successfully</value>
   </data>
+  <data name="Owner" xml:space="preserve">
+    <value>Owner</value>
+  </data>
   <data name="Paid" xml:space="preserve">
     <value>Paid</value>
   </data>
@@ -440,6 +503,12 @@
   </data>
   <data name="PersonalInfo" xml:space="preserve">
     <value>Personal Info</value>
+  </data>
+  <data name="Phone1" xml:space="preserve">
+    <value>Phone1</value>
+  </data>
+  <data name="Phone2" xml:space="preserve">
+    <value>Phone2</value>
   </data>
   <data name="PleaseAddAPassword" xml:space="preserve">
     <value>Please Add A Password</value>
@@ -462,6 +531,9 @@
   <data name="Previous" xml:space="preserve">
     <value>Previous</value>
   </data>
+  <data name="RealEstate" xml:space="preserve">
+    <value>Real-Estate</value>
+  </data>
   <data name="RealEstateKind" xml:space="preserve">
     <value>Real Estate Kind</value>
   </data>
@@ -473,6 +545,9 @@
   </data>
   <data name="RentKind" xml:space="preserve">
     <value>Rent Kind</value>
+  </data>
+  <data name="Room" xml:space="preserve">
+    <value>Room</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Save</value>
@@ -503,6 +578,9 @@
   </data>
   <data name="SortDescending" xml:space="preserve">
     <value>activate to sort column descending :</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
   </data>
   <data name="Stop" xml:space="preserve">
     <value>Stop</value>
@@ -540,6 +618,12 @@
   <data name="TimeAttend" xml:space="preserve">
     <value>Time Attendance System</value>
   </data>
+  <data name="Unit" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="UnitCount" xml:space="preserve">
+    <value>Unit-Count</value>
+  </data>
   <data name="UnitKind" xml:space="preserve">
     <value>Unit Kind</value>
   </data>
@@ -554,6 +638,9 @@
   </data>
   <data name="Updating" xml:space="preserve">
     <value>Updating</value>
+  </data>
+  <data name="UserId" xml:space="preserve">
+    <value>User Id</value>
   </data>
   <data name="UserLogin" xml:space="preserve">
     <value>User Login</value>

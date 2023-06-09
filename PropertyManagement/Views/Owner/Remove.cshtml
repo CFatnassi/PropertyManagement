@@ -1,0 +1,104 @@
+﻿
+@model PropertyManagement.Models.Owner
+@{
+
+}
+
+<style>
+    .modal-header {
+        background-color: #3ea7ed !important;
+    }
+
+    .modal-title {
+        color: white !important;
+    }
+
+    .close {
+        color: white !important;
+    }
+</style>
+
+
+<div id="myModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: block;">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h5 class="modal-title" id="myModalLabel">
+                    @Resources.Resource.Delete
+
+                </h5>
+            </div>
+            <div class="modal-body">
+
+
+                @Html.ValidationSummary(true, "Please Fix The Foloing Error!")
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Guid)*
+                    @Html.TextBoxFor(m => m.Guid, new { @id = "Guid", @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Guid)
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.FullName)*
+                    @Html.TextBoxFor(m => m.FullName, new { @id = "FullName", @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.FullName)
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.IdentityID)
+                    @Html.TextBoxFor(m => m.IdentityID, new { @id = "IdentityID", @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.IdentityID)
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Phone1)*
+                    @Html.TextBoxFor(m => m.Phone1, new { @id = "Phone1", @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Phone1)
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Phone2)*
+                    @Html.TextBoxFor(m => m.Phone2, new { @id = "Phone2", @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Phone2)
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Email)
+                    @Html.TextBoxFor(m => m.Email, new { @id = "Email", @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Email)
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Adress)
+                    @Html.TextBoxFor(m => m.Adress, new { @id = "Adress", @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Adress)
+                </div>
+            </div>
+            <div class="modal-footer">
+
+
+
+                <button type="submit" class="waves-effect waves-light btn btn-info mb-5 fa fa-pencil add-new" id="delete"> @Resources.Resource.Delete </button>
+
+
+                <button type="button" class="waves-effect waves-light btn btn-default mb-5 fa fa-power-off" data-bs-dismiss="modal">  @Resources.Resource.Close</button>
+
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

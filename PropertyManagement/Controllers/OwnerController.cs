@@ -1,4 +1,5 @@
-﻿using PropertyManagement.Models;
+﻿using PropertyManagement.Helpers;
+using PropertyManagement.Models;
 using PropertyManagement.Persistence;
 using PropertyManagement.Repositories;
 using System;
@@ -9,6 +10,7 @@ using System.Web.Mvc;
 
 namespace PropertyManagement.Controllers
 {
+    [Authorize]
     public class OwnerController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -20,37 +22,201 @@ namespace PropertyManagement.Controllers
         // GET: Owner
         public ActionResult Index()
         {
-            IEnumerable<Models.Owner> obj = new List<Models.Owner>();
-            obj = _unitOfWork.Owner.getAll();
-            return View(obj);
-        }
-
-        public ActionResult Create()
-        {
             return View();
         }
-        public ActionResult Save(Models.Owner Owner)
-        {
-            //MsgUnit msg = new MsgUnit();
-            _unitOfWork.Owner.Add(Owner);
-            _unitOfWork.Complete();
 
-            return RedirectToAction("Index");
+        [HttpGet]
+        public JsonResult GetOwner()
+        {
+            try
+            {
+
+
+                var OwnerData = _unitOfWork.Owner.getAll();
+
+                return Json(OwnerData, JsonRequestBehavior.AllowGet);
+            }
+            catch
+            {
+                return Json(new List<RentKind>(), JsonRequestBehavior.AllowGet);
+            }
+
         }
-        public ActionResult Edit(Models.Owner owner)
-        {
-            _unitOfWork.Owner.Update(owner);
-            _unitOfWork.Complete();
 
-            return View();
+
+        public ActionResult CreateNew()
+        {
+            try
+            {
+
+                var Owner = new Owner();
+
+                return PartialView(Owner);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message.ToString();
+                return View("Error");
+            }
         }
-       
-        public ActionResult Delete(Guid guid)
+        [HttpPost]
+        public JsonResult SaveNew(Owner ObjToSave)
         {
-            _unitOfWork.Owner.Delete(guid);
-            _unitOfWork.Complete();
+            MsgUnit Msg = new MsgUnit();
+            try
+            {
+                if (!ModelState.IsValid)
+                {
 
-            return View();
+                    string Err = " ";
+                    var errors = ModelState.Values.SelectMany(v => v.Errors);
+                    foreach (ModelError error in errors)
+                    {
+                        Err = Err + error.ErrorMessage + "  ";
+                    }
+
+                    Msg.Msg = Resources.Resource.SomthingWentWrong + " " + Err;
+                    Msg.Code = 0;
+                    return Json(Msg, JsonRequestBehavior.AllowGet);
+
+                }
+
+                _unitOfWork.Owner.Add(ObjToSave);
+                _unitOfWork.Complete();
+                Msg.Msg = Resources.Resource.AddedSuccessfully;
+                Msg.Code = 1;
+            }
+            catch (Exception ex)
+            {
+
+                Msg.Msg = Resources.Resource.SomthingWentWrong + " " + ex.Message.ToString();
+                Msg.Code = 0;
+
+            }
+
+            return Json(Msg, JsonRequestBehavior.AllowGet);
+        }
+
+
+
+
+
+
+        public ActionResult Modify(Guid Id)
+        {
+            try
+            {
+
+                var OwnerData = _unitOfWork.Owner.GetMyOwner(Id);
+
+                return PartialView(OwnerData);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message.ToString();
+                return View("Error");
+            }
+        }
+        [HttpPost]
+        public JsonResult Update(Owner ObjToSave)
+        {
+            MsgUnit Msg = new MsgUnit();
+            try
+            {
+
+
+                if (!ModelState.IsValid)
+                {
+
+                    string Err = " ";
+                    var errors = ModelState.Values.SelectMany(v => v.Errors);
+                    foreach (ModelError error in errors)
+                    {
+                        Err = Err + error.ErrorMessage + "  ";
+                    }
+
+                    Msg.Msg = Resources.Resource.SomthingWentWrong + " " + Err;
+                    Msg.Code = 0;
+                    return Json(Msg, JsonRequestBehavior.AllowGet);
+
+                }
+
+                _unitOfWork.Owner.Update(ObjToSave);
+                _unitOfWork.Complete();
+                Msg.Msg = Resources.Resource.AddedSuccessfully;
+                Msg.Code = 1;
+            }
+            catch (Exception ex)
+            {
+
+                Msg.Msg = Resources.Resource.SomthingWentWrong + " " + ex.Message.ToString();
+                Msg.Code = 0;
+
+            }
+
+            return Json(Msg, JsonRequestBehavior.AllowGet);
+
+        }
+
+        public ActionResult Remove(Guid Id)
+        {
+            try
+            {
+
+                var OwnerData = _unitOfWork.Owner.GetMyOwner(Id);
+
+                return PartialView(OwnerData);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message.ToString();
+                return View("Error");
+            }
+        }
+        [HttpPost]
+        public JsonResult Delete(Owner ObjToSave)
+        {
+            MsgUnit Msg = new MsgUnit();
+            try
+            {
+
+
+                if (!ModelState.IsValid)
+                {
+
+                    string Err = " ";
+                    var errors = ModelState.Values.SelectMany(v => v.Errors);
+                    foreach (ModelError error in errors)
+                    {
+                        Err = Err + error.ErrorMessage + "  ";
+                    }
+
+                    Msg.Msg = Resources.Resource.SomthingWentWrong + " " + Err;
+                    Msg.Code = 0;
+                    return Json(Msg, JsonRequestBehavior.AllowGet);
+
+                }
+
+                _unitOfWork.Owner.Delete(ObjToSave.Guid);
+                _unitOfWork.Complete();
+                Msg.Msg = Resources.Resource.AddedSuccessfully;
+                Msg.Code = 1;
+            }
+            catch (Exception ex)
+            {
+
+                Msg.Msg = Resources.Resource.SomthingWentWrong + " " + ex.Message.ToString();
+                Msg.Code = 0;
+
+            }
+
+
+
+
+            return Json(Msg, JsonRequestBehavior.AllowGet);
+
+
+
         }
     }
 }

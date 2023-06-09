@@ -171,7 +171,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
-    <Compile Include="Controllers\CompaniesController.cs" />
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -18615,26 +18614,14 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Company\Index.cshtml" />
-    <Content Include="Views\Company\Create.cshtml" />
-    <Content Include="Views\Company\Delete.cshtml" />
     <Content Include="Views\UnitKind\Index.cshtml" />
     <Content Include="Views\RentKind\Index.cshtml" />
     <Content Include="Views\RentKind\Create.cshtml" />
     <Content Include="Views\RentKind\Edit.cshtml" />
     <Content Include="Views\RentKind\Delete.cshtml" />
-    <Content Include="Views\Company\Edit.cshtml" />
     <Content Include="Views\Units\Index.cshtml" />
-    <Content Include="Views\Units\Create.cshtml" />
-    <Content Include="Views\Units\Edit.cshtml" />
-    <Content Include="Views\Units\Delete.cshtml" />
     <Content Include="Views\RealEstate\Index.cshtml" />
-    <Content Include="Views\RealEstate\Create.cshtml" />
-    <Content Include="Views\RealEstate\Edit.cshtml" />
-    <Content Include="Views\RealEstate\Delete.cshtml" />
     <Content Include="Views\Owner\Index.cshtml" />
-    <Content Include="Views\Owner\Create.cshtml" />
-    <Content Include="Views\Owner\Edit.cshtml" />
-    <Content Include="Views\Owner\Delete.cshtml" />
     <Content Include="src\css\bootstrap_extend.css.map" />
     <Content Include="src\css\color_theme.css.map" />
     <Content Include="src\css\horizontal-menu.css.map" />
@@ -19870,8 +19857,6 @@
     <Content Include="Scripts\umd\popper.js.map" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Views\Shared\Layout_Login.cshtml" />
-    <Content Include="Views\Companies\Index.cshtml" />
-    <Content Include="Views\Companies\CreateNew.cshtml" />
     <Content Include="Views\RentKinds\Index.cshtml" />
     <Content Include="Views\RentKinds\CreateNew.cshtml" />
     <Content Include="Views\RentKinds\Modify.cshtml" />
@@ -19883,6 +19868,18 @@
     <Content Include="Views\UnitKind\CreateNew.cshtml" />
     <Content Include="Views\UnitKind\Modify.cshtml" />
     <Content Include="Views\UnitKind\Remove.cshtml" />
+    <Content Include="Views\Units\CreateNew.cshtml" />
+    <Content Include="Views\Units\Modify.cshtml" />
+    <Content Include="Views\Units\Remove.cshtml" />
+    <Content Include="Views\RealEstate\CreateNew.cshtml" />
+    <Content Include="Views\RealEstate\Modify.cshtml" />
+    <Content Include="Views\RealEstate\Remove.cshtml" />
+    <Content Include="Views\Owner\CreateNew.cshtml" />
+    <Content Include="Views\Owner\Modify.cshtml" />
+    <Content Include="Views\Owner\Remove.cshtml" />
+    <Content Include="Views\Company\CreateNew.cshtml" />
+    <Content Include="Views\Company\Modify.cshtml" />
+    <Content Include="Views\Company\Remove.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
