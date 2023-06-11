@@ -523,6 +523,9 @@
   <data name="PleaseWait" xml:space="preserve">
     <value>يرجي الانتظار</value>
   </data>
+  <data name="PlsSelectUnitKind" xml:space="preserve">
+    <value>يرجي اختيار نوع الوحدة</value>
+  </data>
   <data name="PointSale" xml:space="preserve">
     <value>نظام ادارة نقاط البيع</value>
   </data>

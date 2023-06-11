@@ -81,7 +81,7 @@ namespace PropertyManagement.Controllers
                     return Json(Msg, JsonRequestBehavior.AllowGet);
 
                 }
-                 
+              
                 _unitOfWork.RentKind.Add(ObjToSave);
                 _unitOfWork.Complete();
                 Msg.Msg = Resources.Resource.AddedSuccessfully;

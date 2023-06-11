@@ -31,10 +31,7 @@ namespace PropertyManagement.Controllers
         {
             try
             {
-
-
                 var UnitData = _unitOfWork.Unit.getAll();
-
                 return Json(UnitData, JsonRequestBehavior.AllowGet);
             }
             catch
@@ -50,7 +47,12 @@ namespace PropertyManagement.Controllers
             try
             {
 
-                var Unit = new Units();
+                var Unit = new UnitView();
+                IEnumerable<UnitKind> unitKinds = _unitOfWork.UnitKind.getAll();
+
+                Unit.UnitKinds = unitKinds;
+
+
 
                 return PartialView(Unit);
             }

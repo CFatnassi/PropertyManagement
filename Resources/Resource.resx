@@ -519,6 +519,9 @@
   <data name="PleaseWait" xml:space="preserve">
     <value>Please Wait</value>
   </data>
+  <data name="PlsSelectUnitKind" xml:space="preserve">
+    <value>Please Select Unit Kind</value>
+  </data>
   <data name="PointSale" xml:space="preserve">
     <value>Point Of Sale System</value>
   </data>

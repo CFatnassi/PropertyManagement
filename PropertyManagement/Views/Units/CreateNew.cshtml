@@ -1,4 +1,4 @@
-﻿@model PropertyManagement.Models.Units
+﻿@model PropertyManagement.ViewModels.UnitView
 @{
 
 }
@@ -36,18 +36,16 @@
 
 
 
-
                 <div class="form-group">
-                    @Html.LabelFor(m => m.FUnitKindId)*
-                    @Html.TextBoxFor(m => m.FUnitKindId, new { @id = "FUnitKindId", @class = "form-control", @type = "number", @min = "1" })
-                    @Html.ValidationMessageFor(m => m.FUnitKindId)
+                    @Html.LabelFor(m => m.FUnitKindId)  <strong class="text-danger">*</strong>
+
+                    @Html.DropDownListFor(m => m.FUnitKindId, new SelectList(Model.UnitKinds, "Code", "ArName"), Resources.Resource.PlsSelectUnitKind, new { @id = "FUnitKindId", @class = "form-select" })
                 </div>
 
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Guid)*
-                    @Html.TextBoxFor(m => m.Guid, new { @id = "Guid", @class = "form-control" })
-                    @Html.ValidationMessageFor(m => m.Guid)
-                </div>
+
+
+
+
 
                 <div class="form-group">
                     @Html.LabelFor(m => m.FRealEstGuid)

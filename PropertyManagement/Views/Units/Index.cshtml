@@ -2,6 +2,7 @@
 @{
 
     Layout = "~/Views/Shared/_Layout.cshtml";
+     
 }
 
 
@@ -34,7 +35,7 @@
                         <th class="Font">@Resources.Resource.FUnitKindId</th>
 
                         <th class="Font">@Resources.Resource.Guid</th>
-                        <th class="Font">@Resources.Resource.FRealEstGuid</th>
+                     
 						<th class="Font">@Resources.Resource.NickName</th>
 
                         <th class="Font">@Resources.Resource.AreaSize</th>
@@ -59,8 +60,9 @@
 <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> </div>
 @section scripts{
     @Scripts.Render("~/bundles/jqueryval");
-    <script>
+<script>
 	$(document).ready(function () {
+
 		var tabelMemRef = $("#tdataTable").DataTable({
            processing: true,
             "language": {
@@ -106,7 +108,11 @@
                     url: "/Units/GetUnits",
 					dataSrc: ""
 				},
-				columns: [
+			columns: [
+
+				 
+
+                      
 					{
 
                         data:"FUnitKindId"
@@ -270,7 +276,7 @@
 
 
 				var dataToSave = {
-                    
+
                     UnitKind: $("#FUnitKindId").val(), Guid: $("#Guid").val(), NickName: $("#NickName").val(), AreaSize: $("#AreaSize").val(), Room: $("#Room").val(), Bathroom: $("#Bathroom").val(), Kitchen: $("#Kitchen").val()
 				};
 				$.ajax({
@@ -416,7 +422,7 @@
 	});
 
 
-    </script>
+</script>
 
 
 }

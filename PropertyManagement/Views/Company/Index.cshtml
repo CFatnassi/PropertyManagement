@@ -157,7 +157,12 @@
 					},
 
 					{
-                        data: "CreateDate"
+                        data: "CreateDate",
+                        render: function (data, type, r) {
+                            return moment(data).format('DD/MM/YYYY');
+                        }
+
+ 
 
 					},
 

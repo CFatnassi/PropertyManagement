@@ -44,16 +44,16 @@ namespace PropertyManagement.Persistence
             var D = _context.Companies.FirstOrDefault(m => m.Guid == ObjtToUpdate.Guid);
             if (D != null)
             {
-                D.Id = ObjtToUpdate.Id;
+               
                 D.Name = ObjtToUpdate.Name;
                 D.Email = ObjtToUpdate.Email;
                 D.Adress = ObjtToUpdate.Adress;
-                D.Guid = ObjtToUpdate.Guid;
+             
                 D.Status = ObjtToUpdate.Status;
-                D.Logo = ObjtToUpdate.Logo;
+             
                 D.Country = ObjtToUpdate.Country;
-                D.UserId = ObjtToUpdate.UserId;
-                D.CreateDate = ObjtToUpdate.CreateDate;            
+           
+                      
 
             }
         }

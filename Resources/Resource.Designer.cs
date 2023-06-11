@@ -1267,6 +1267,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please Select Unit Kind.
+        /// </summary>
+        public static string PlsSelectUnitKind {
+            get {
+                return ResourceManager.GetString("PlsSelectUnitKind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Point Of Sale System.
         /// </summary>
         public static string PointSale {

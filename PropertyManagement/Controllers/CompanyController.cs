@@ -80,6 +80,8 @@ namespace PropertyManagement.Controllers
 
                 }
 
+                ObjToSave.Guid = Guid.NewGuid();
+
                 _unitOfWork.Company.Add(ObjToSave);
                 _unitOfWork.Complete();
                 Msg.Msg = Resources.Resource.AddedSuccessfully;
