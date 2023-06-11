@@ -35,11 +35,11 @@
 
                         <th class="Font">@Resources.Resource.Guid</th>
                         <th class="Font">@Resources.Resource.FRealEstGuid</th>
-						<th class="Font">@Resources.Resource.NickName</th>
+                        <th class="Font">@Resources.Resource.NickName</th>
 
                         <th class="Font">@Resources.Resource.AreaSize</th>
                         <th class="Font">@Resources.Resource.Room</th>
-						<th class="Font">@Resources.Resource.Bathroom</th>
+                        <th class="Font">@Resources.Resource.Bathroom</th>
 
                         <th class="Font">@Resources.Resource.Kitchen</th>
                         <th class="Font">@Resources.Resource.Modify</th>
@@ -60,8 +60,8 @@
 @section scripts{
     @Scripts.Render("~/bundles/jqueryval");
     <script>
-	$(document).ready(function () {
-		var tabelMemRef = $("#tdataTable").DataTable({
+    $(document).ready(function () {
+        var tabelMemRef = $("#tdataTable").DataTable({
            processing: true,
             "language": {
                 "emptyTable": '@Resources.Resource.EmptyTable',
@@ -102,67 +102,67 @@
                 { extend: 'csv', className: 'btn btn-primary btn-sm' },
                 { extend: 'print', className: 'btn btn-warning btn-sm' }
             ],
-				ajax: {
+                ajax: {
                     url: "/Units/GetUnits",
-					dataSrc: ""
-				},
-				columns: [
-					{
+                    dataSrc: ""
+                },
+                columns: [
+                    {
 
                         data:"FUnitKindId"
-					},
+                    },
 
-					{
+                    {
                         data: "Guid"
 
-					},
+                    },
 
-					{
+                    {
                         data: "NickName"
 
-					},
-					{
+                    },
+                    {
 
                         data:"AreaSize"
-					},
+                    },
 
-					{
+                    {
                         data: "Room"
 
-					},
+                    },
 
-					{
+                    {
                         data: "Bathroom"
 
-					},
-					{
+                    },
+                    {
                         data: "Kitchen"
 
-					},
+                    },
 
 
-					{
-                        data: "Guid",
-						render: function (data, type, r) {
+                    {
+                        data: "Id",
+                        render: function (data, type, r) {
 
 
                             return "<button  class='waves-effect waves-light btn btn-info mb-5 js-modify btn-sm' href='/Units/Modify/" + data + "'> <i class='ti-slice'></i></button>";
 
 
-						}
-					},
+                        }
+                    },
 
 
-					{
-                        data: "Guid",
+                    {
+                        data: "Id",
                         render: function (data) {
 
 
                             return "<button  class='btn  btn-icon-anim btn btn-danger js-modify btn-danger btn-sm' href='/Units/Remove/" + data + "'> <i class='fa fa-trash-o'></i></button>";
 
-						}
+                        }
 
-					}
+                    }
 
 
                 ]
@@ -174,246 +174,246 @@
                 //}
 
 
-			});
+            });
 
 
 
-		$('#tdataTable').on('click', '.js-delete', function (e) {
-			var dialog = bootbox.dialog({
-					title: '@Resources.Resource.PleaseWait',
-					message: '<p><i class="fa fa-spin fa-spinner"></i> @Resources.Resource.PleaseWait...</p>',
-					closeButton: false
-				});
+        $('#tdataTable').on('click', '.js-delete', function (e) {
+            var dialog = bootbox.dialog({
+                    title: '@Resources.Resource.PleaseWait',
+                    message: '<p><i class="fa fa-spin fa-spinner"></i> @Resources.Resource.PleaseWait...</p>',
+                    closeButton: false
+                });
                 e.preventDefault();
 
                 $('#myModal').modal('hide');
                 $('#myModal').unbind().modal();
-             	url = this.getAttribute('href');
-				$.get(url, function (data) {
-					$('#myModal').replaceWith(data);
+                url = this.getAttribute('href');
+                $.get(url, function (data) {
+                    $('#myModal').replaceWith(data);
 
                     $('#myModal').modal('toggle');
                     setTimeout(function () { dialog.modal('hide'); }, 1000);
                 });
         });
 
-		$('#tdataTable').on('click', '.js-modify', function (e) {
-			var dialog = bootbox.dialog({
-					title: '@Resources.Resource.PleaseWait',
-					message: '<p><i class="fa fa-spin fa-spinner"></i> @Resources.Resource.PleaseWait...</p>',
-					closeButton: false
-				});
+        $('#tdataTable').on('click', '.js-modify', function (e) {
+            var dialog = bootbox.dialog({
+                    title: '@Resources.Resource.PleaseWait',
+                    message: '<p><i class="fa fa-spin fa-spinner"></i> @Resources.Resource.PleaseWait...</p>',
+                    closeButton: false
+                });
                 e.preventDefault();
 
                 $('#myModal').modal('hide');
                 $('#myModal').unbind().modal();
-             	url = this.getAttribute('href');
-				$.get(url, function (data) {
-					$('#myModal').replaceWith(data);
+                url = this.getAttribute('href');
+                $.get(url, function (data) {
+                    $('#myModal').replaceWith(data);
 
                     $('#myModal').modal('toggle');
                     setTimeout(function () { dialog.modal('hide'); }, 1000);
                 });
         });
 
-		$('#js-addnew').on('click', function (e) {
-			var dialog = bootbox.dialog({
-					title: '@Resources.Resource.PleaseWait',
-					message: '<p><i class="fa fa-spin fa-spinner"></i> @Resources.Resource.PleaseWait...</p>',
-					closeButton: false
-				});
+        $('#js-addnew').on('click', function (e) {
+            var dialog = bootbox.dialog({
+                    title: '@Resources.Resource.PleaseWait',
+                    message: '<p><i class="fa fa-spin fa-spinner"></i> @Resources.Resource.PleaseWait...</p>',
+                    closeButton: false
+                });
                 e.preventDefault();
 
                 $('#myModal').modal('hide');
                 $('#myModal').unbind().modal();
-             	url = this.getAttribute('href');
-				$.get(url, function (data) {
-					$('#myModal').replaceWith(data);
+                url = this.getAttribute('href');
+                $.get(url, function (data) {
+                    $('#myModal').replaceWith(data);
 
                     $('#myModal').modal('toggle');
                     setTimeout(function () { dialog.modal('hide'); }, 1000);
                 });
         });
 
-			// Attach listener to .modal-close-btn's so that when the button is pressed the modal dialog disappears
-		$('#tdataTable').on('click', '.modal-close-btn', function () {
-				$('#myModal').modal('hide');
-			});
-			//clear modal cache, so that new content can be loaded
-		 $('#myModal').on('hidden.bs.modal', function () {
-				$(this).removeData('bs.modal');
+            // Attach listener to .modal-close-btn's so that when the button is pressed the modal dialog disappears
+        $('#tdataTable').on('click', '.modal-close-btn', function () {
+                $('#myModal').modal('hide');
+            });
+            //clear modal cache, so that new content can be loaded
+         $('#myModal').on('hidden.bs.modal', function () {
+                $(this).removeData('bs.modal');
 
-			});
+            });
 
-		 $('#CancelModal').on('click', function (e) {             e.preventDefault();
-				return false;
-			});
+         $('#CancelModal').on('click', function (e) {             e.preventDefault();
+                return false;
+            });
 
-		$(document).on('click', '#save', function (e) {
-			e.preventDefault();
+        $(document).on('click', '#save', function (e) {
+            e.preventDefault();
 
             if (($("#FUnitKindId").val() == '') || ($("#Guid").val() == '') || ($("#NickName").val() == '') || ($("#AreaSize").val() == '') || ($("#Room").val() == '') || ($("#Bathroom").val() == '') || ($("#Kitchen").val() == ''))  {
-					bootbox.alert({
-						message: '@Resources.Resource.PleasefillalRequiredfields',
-						size: 'small'
-					});
+                    bootbox.alert({
+                        message: '@Resources.Resource.PleasefillalRequiredfields',
+                        size: 'small'
+                    });
 
-				}
-				else {
-
-
-				var dialog = bootbox.dialog({
-					title: '@Resources.Resource.PleaseWait',
-					message: '<p><i class="fa fa-spin fa-spinner"></i> @Resources.Resource.Saving...</p>',
-					closeButton: false
-				});
+                }
+                else {
 
 
-				var dataToSave = {
+                var dialog = bootbox.dialog({
+                    title: '@Resources.Resource.PleaseWait',
+                    message: '<p><i class="fa fa-spin fa-spinner"></i> @Resources.Resource.Saving...</p>',
+                    closeButton: false
+                });
+
+
+                var dataToSave = {
                     
                     UnitKind: $("#FUnitKindId").val(), Guid: $("#Guid").val(), NickName: $("#NickName").val(), AreaSize: $("#AreaSize").val(), Room: $("#Room").val(), Bathroom: $("#Bathroom").val(), Kitchen: $("#Kitchen").val()
-				};
-				$.ajax({
-					type: "POST",
+                };
+                $.ajax({
+                    type: "POST",
                     url: "/Units/SaveNew",
-					data: JSON.stringify(dataToSave),
-					contentType: 'application/json',
-					success: function (data) {
-						setTimeout(function () {                            dialog.modal('hide');                         }, 1000);
-						if (data.Code == 0) {
-							toastr.error(data.Msg);
-						}
-						else if (data.Code == 1) {
-							$('#myModal').modal('hide');
-							toastr.success(data.Msg);
-							tabelMemRef.ajax.reload();
-						 ;
-						}
+                    data: JSON.stringify(dataToSave),
+                    contentType: 'application/json',
+                    success: function (data) {
+                        setTimeout(function () {                            dialog.modal('hide');                         }, 1000);
+                        if (data.Code == 0) {
+                            toastr.error(data.Msg);
+                        }
+                        else if (data.Code == 1) {
+                            $('#myModal').modal('hide');
+                            toastr.success(data.Msg);
+                            tabelMemRef.ajax.reload();
+                         ;
+                        }
 
-					},
-					error: function (data) {
-						setTimeout(function () {                            dialog.modal('hide');                         }, 1000);
-						toastr.error(data);
-					}
+                    },
+                    error: function (data) {
+                        setTimeout(function () {                            dialog.modal('hide');                         }, 1000);
+                        toastr.error(data);
+                    }
 
 
 
-					});
+                    });
 
-				}
+                }
 
-			});
+            });
 
-		$(document).on('click', '#update', function (e) {
-			e.preventDefault();
+        $(document).on('click', '#update', function (e) {
+            e.preventDefault();
             if (($("#FUnitKindId").val() == '') || ($("#Guid").val() == '') || ($("#NickName").val() == '') || ($("#AreaSize").val() == '') || ($("#Room").val() == '') || ($("#Bathroom").val() == '') || ($("#Kitchen").val() == ''))  {
-					bootbox.alert({
-						message: '@Resources.Resource.PleasefillalRequiredfields',
-						size: 'small'
-					});
+                    bootbox.alert({
+                        message: '@Resources.Resource.PleasefillalRequiredfields',
+                        size: 'small'
+                    });
 
-				}
-				else {
-
-
-				var dialog = bootbox.dialog({
-					title: '@Resources.Resource.PleaseWait',
-					message: '<p><i class="fa fa-spin fa-spinner"></i> @Resources.Resource.Saving...</p>',
-					closeButton: false
-				});
+                }
+                else {
 
 
-				var dataToSave = {
+                var dialog = bootbox.dialog({
+                    title: '@Resources.Resource.PleaseWait',
+                    message: '<p><i class="fa fa-spin fa-spinner"></i> @Resources.Resource.Saving...</p>',
+                    closeButton: false
+                });
+
+
+                var dataToSave = {
                     UnitKind: $("#FUnitKindId").val(), Guid: $("#Guid").val(),
                     NickName: $("#NickName").val(), AreaSize: $("#AreaSize").val(), Room: $("#Room").val(), Bathroom: $("#Bathroom").val(), Kitchen: $("#Kitchen").val()
-				};
-				$.ajax({
-					type: "POST",
+                };
+                $.ajax({
+                    type: "POST",
                     url: "/Units/Update",
-					data: JSON.stringify(dataToSave),
-					contentType: 'application/json',
-					success: function (data) {
-						setTimeout(function () {                            dialog.modal('hide');                         }, 1000);
-						if (data.Code == 0) {
-							toastr.error(data.Msg);
-						}
-						else if (data.Code == 1) {
-							$('#myModal').modal('hide');
-							toastr.success(data.Msg);
-							tabelMemRef.ajax.reload();
+                    data: JSON.stringify(dataToSave),
+                    contentType: 'application/json',
+                    success: function (data) {
+                        setTimeout(function () {                            dialog.modal('hide');                         }, 1000);
+                        if (data.Code == 0) {
+                            toastr.error(data.Msg);
+                        }
+                        else if (data.Code == 1) {
+                            $('#myModal').modal('hide');
+                            toastr.success(data.Msg);
+                            tabelMemRef.ajax.reload();
 
-						}
+                        }
 
-					},
-					error: function (data) {
-						setTimeout(function () {                            dialog.modal('hide');                         }, 1000);
-						toastr.error(data);
-					}
+                    },
+                    error: function (data) {
+                        setTimeout(function () {                            dialog.modal('hide');                         }, 1000);
+                        toastr.error(data);
+                    }
 
 
-					});
+                    });
 
-				}
+                }
 
-			});
+            });
 
 
 
 
         $(document).on('click', '#delete', function (e) {
-			e.preventDefault();
+            e.preventDefault();
             if (($("#FUnitKindId").val() == '') || ($("#Guid").val() == '') || ($("#NickName").val() == '') || ($("#AreaSize").val() == '') || ($("#Room").val() == '') || ($("#Bathroom").val() == '') || ($("#Kitchen").val() == ''))  {
-					bootbox.alert({
-						message: '@Resources.Resource.PleasefillalRequiredfields',
-						size: 'small'
-					});
+                    bootbox.alert({
+                        message: '@Resources.Resource.PleasefillalRequiredfields',
+                        size: 'small'
+                    });
 
-				}
-				else {
-
-
-				var dialog = bootbox.dialog({
-					title: '@Resources.Resource.Deleting',
-					message: '<p><i class="fa fa-spin fa-spinner"></i> @Resources.Resource.Deleting...</p>',
-					closeButton: false
-				});
+                }
+                else {
 
 
-				var dataToSave = {
+                var dialog = bootbox.dialog({
+                    title: '@Resources.Resource.Deleting',
+                    message: '<p><i class="fa fa-spin fa-spinner"></i> @Resources.Resource.Deleting...</p>',
+                    closeButton: false
+                });
+
+
+                var dataToSave = {
                     UnitKind: $("#FUnitKindId").val(), Guid: $("#Guid").val(),
                     NickName: $("#NickName").val(), AreaSize: $("#AreaSize").val(), Room: $("#Room").val(), Bathroom: $("#Bathroom").val(), Kitchen: $("#Kitchen").val()
-				};
-				$.ajax({
-					type: "POST",
+                };
+                $.ajax({
+                    type: "POST",
                     url: "/Units/Delete",
-					data: JSON.stringify(dataToSave),
-					contentType: 'application/json',
-					success: function (data) {
-						setTimeout(function () {                            dialog.modal('hide');                         }, 1000);
-						if (data.Code == 0) {
-							toastr.error(data.Msg);
-						}
-						else if (data.Code == 1) {
-							$('#myModal').modal('hide');
-							toastr.success(data.Msg);
-							tabelMemRef.ajax.reload();
+                    data: JSON.stringify(dataToSave),
+                    contentType: 'application/json',
+                    success: function (data) {
+                        setTimeout(function () {                            dialog.modal('hide');                         }, 1000);
+                        if (data.Code == 0) {
+                            toastr.error(data.Msg);
+                        }
+                        else if (data.Code == 1) {
+                            $('#myModal').modal('hide');
+                            toastr.success(data.Msg);
+                            tabelMemRef.ajax.reload();
 
-						}
+                        }
 
-					},
-					error: function (data) {
-						setTimeout(function () {                            dialog.modal('hide');                         }, 1000);
-						toastr.error(data);
-					}
+                    },
+                    error: function (data) {
+                        setTimeout(function () {                            dialog.modal('hide');                         }, 1000);
+                        toastr.error(data);
+                    }
 
 
-					});
+                    });
 
-				}
+                }
 
-			});
+            });
 
-	});
+    });
 
 
     </script>
