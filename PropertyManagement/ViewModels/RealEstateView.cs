@@ -17,7 +17,7 @@ namespace PropertyManagement.ViewModels
         public String Code { get; set; }
         public String Details { get; set; }
 
-        public IEnumerable<RealEstateKind> RealEstateKind { get; set; }
+        public IEnumerable<RealEstateKind> RealEstateKinds { get; set; }
         public int RealEstateKindId { get; set; }
     }
 }

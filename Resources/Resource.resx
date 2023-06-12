@@ -163,7 +163,7 @@
     <value>Arabic Name</value>
   </data>
   <data name="AreaSize" xml:space="preserve">
-    <value>AreaSize</value>
+    <value>Area Size</value>
   </data>
   <data name="AreYouSure" xml:space="preserve">
     <value>Are You Sure ?</value>
@@ -315,6 +315,9 @@
   <data name="Delete" xml:space="preserve">
     <value>Delete</value>
   </data>
+  <data name="DeletedSuccessfully" xml:space="preserve">
+    <value>Deleted Successfully</value>
+  </data>
   <data name="Deleting" xml:space="preserve">
     <value>Deleting</value>
   </data>
@@ -456,8 +459,20 @@
   <data name="New" xml:space="preserve">
     <value>New</value>
   </data>
+  <data name="NewCompany" xml:space="preserve">
+    <value>New Company</value>
+  </data>
+  <data name="NewOwner" xml:space="preserve">
+    <value>New Owner</value>
+  </data>
   <data name="Newpassword" xml:space="preserve">
     <value>New password</value>
+  </data>
+  <data name="NewRealEstate" xml:space="preserve">
+    <value>New Real-Estate</value>
+  </data>
+  <data name="NewUnit" xml:space="preserve">
+    <value>NewUnit</value>
   </data>
   <data name="Next" xml:space="preserve">
     <value>Next</value>
@@ -518,6 +533,9 @@
   </data>
   <data name="PleaseWait" xml:space="preserve">
     <value>Please Wait</value>
+  </data>
+  <data name="PlsSelectRlEst" xml:space="preserve">
+    <value>Please Select the realestate</value>
   </data>
   <data name="PlsSelectUnitKind" xml:space="preserve">
     <value>Please Select Unit Kind</value>

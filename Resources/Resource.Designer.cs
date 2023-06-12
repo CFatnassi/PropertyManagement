@@ -196,7 +196,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to AreaSize.
+        ///   Looks up a localized string similar to Area Size.
         /// </summary>
         public static string AreaSize {
             get {
@@ -655,6 +655,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Deleted Successfully.
+        /// </summary>
+        public static string DeletedSuccessfully {
+            get {
+                return ResourceManager.GetString("DeletedSuccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Deleting.
         /// </summary>
         public static string Deleting {
@@ -1078,11 +1087,47 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to New Company.
+        /// </summary>
+        public static string NewCompany {
+            get {
+                return ResourceManager.GetString("NewCompany", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Owner.
+        /// </summary>
+        public static string NewOwner {
+            get {
+                return ResourceManager.GetString("NewOwner", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to New password.
         /// </summary>
         public static string Newpassword {
             get {
                 return ResourceManager.GetString("Newpassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Real-Estate.
+        /// </summary>
+        public static string NewRealEstate {
+            get {
+                return ResourceManager.GetString("NewRealEstate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NewUnit.
+        /// </summary>
+        public static string NewUnit {
+            get {
+                return ResourceManager.GetString("NewUnit", resourceCulture);
             }
         }
         
@@ -1263,6 +1308,15 @@ namespace Resources {
         public static string PleaseWait {
             get {
                 return ResourceManager.GetString("PleaseWait", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please Select the realestate.
+        /// </summary>
+        public static string PlsSelectRlEst {
+            get {
+                return ResourceManager.GetString("PlsSelectRlEst", resourceCulture);
             }
         }
         

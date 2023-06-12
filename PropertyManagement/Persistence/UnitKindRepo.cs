@@ -7,7 +7,7 @@ using System.Web;
 
 namespace PropertyManagement.Persistence
 {
-    public class UnitKindRepo : IUnitKind
+    public class UnitKindRepo : IUnitKindRepo
     {
         private readonly ApplicationDbContext _context;
 
@@ -42,7 +42,6 @@ namespace PropertyManagement.Persistence
             {
                 D.ArName = ObjtToUpdate.ArName;
                 D.EngName = ObjtToUpdate.EngName;
-                D.Code = ObjtToUpdate.Code;
                 
 
 

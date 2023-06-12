@@ -13,7 +13,7 @@ namespace PropertyManagement.Repositories
          IRealEstateRepo RealEstate { get;}
          IRealEstateKindRepo RealEstateKind { get;}
          IRentKindRepo RentKind { get;}
-         IUnitKind UnitKind { get;}
+         IUnitKindRepo UnitKind { get;}
 
 
         void Complete();

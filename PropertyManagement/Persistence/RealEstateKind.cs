@@ -42,7 +42,6 @@ namespace PropertyManagement.Persistence
             {
                 D.ArName = ObjtToUpdate.ArName;
                 D.EngName = ObjtToUpdate.EngName;
-                D.Code = ObjtToUpdate.Code;
                
 
 

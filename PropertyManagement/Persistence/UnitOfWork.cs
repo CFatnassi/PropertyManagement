@@ -17,7 +17,7 @@ namespace PropertyManagement.Persistence
         public IRealEstateRepo RealEstate { get; private set; }
         public IRealEstateKindRepo RealEstateKind { get; private set; }
         public IRentKindRepo RentKind { get; private set; }
-        public IUnitKind UnitKind { get; private set; }
+        public IUnitKindRepo UnitKind { get; private set; }
         
         
         public UnitOfWork(ApplicationDbContext context)

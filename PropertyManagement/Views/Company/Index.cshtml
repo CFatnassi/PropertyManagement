@@ -21,7 +21,7 @@
 
                 <a class="waves-effect waves-light btn btn-primary mb-5" id="js-addnew" href="/Company/CreateNew">
                     <i class="ti-save"></i>
-                    @Resources.Resource.CreateNewKind
+                    @Resources.Resource.NewCompany
                 </a>
 
 
@@ -34,13 +34,11 @@
                 <thead class="bg-primary">
                     <tr>
 
-                        <th class="Font">@Resources.Resource.Id</th>
 
                         <th class="Font">@Resources.Resource.Name</th>
                         <th class="Font">@Resources.Resource.Email</th>
                         <th class="Font">@Resources.Resource.Adress</th>
 
-                        <th class="Font">@Resources.Resource.Guid</th>
                         <th class="Font">@Resources.Resource.Status</th>
                         <th class="Font">@Resources.Resource.Logo</th>
                         <th class="Font">@Resources.Resource.Country</th>
@@ -113,10 +111,7 @@
 					dataSrc: ""
 				},
 				columns: [
-					{
-
-                        data:"Id"
-					},
+					
 					{
 
                         data:"Name"
@@ -132,10 +127,7 @@
 
 					},
 
-					{
-
-                        data:"Guid"
-					},
+					
 
 					{
                         data: "Status"
@@ -168,7 +160,7 @@
 
 
 					{
-                        data: "Id",
+                        data: "Guid",
 						render: function (data, type, r) {
 
 
@@ -180,7 +172,7 @@
 
 
 					{
-                        data: "Id",
+                        data: "Guid",
                         render: function (data) {
 
 

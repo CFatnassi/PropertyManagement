@@ -1,4 +1,5 @@
 ﻿@model PropertyManagement.ViewModels.UnitView
+
 @{
 
 }
@@ -42,19 +43,22 @@
                     @Html.DropDownListFor(m => m.FUnitKindId, new SelectList(Model.UnitKinds, "Code", "ArName"), Resources.Resource.PlsSelectUnitKind, new { @id = "FUnitKindId", @class = "form-select" })
                 </div>
 
-
-
-
-
-
                 <div class="form-group">
-                    @Html.LabelFor(m => m.FRealEstGuid)
-                    @Html.TextBoxFor(m => m.FRealEstGuid, new { @id = "FRealEstGuid", @class = "form-control" })
-                    @Html.ValidationMessageFor(m => m.FRealEstGuid)
+                    @Html.LabelFor(m => m.FRealEstGuid)  <strong class="text-danger">*</strong>
+
+                    @Html.DropDownListFor(m => m.FRealEstGuid, new SelectList(Model.RealEstates, "Code", "Location"), Resources.Resource.PlsSelectUnitKind, new { @id = "FRealEstGuid", @class = "form-select" })
                 </div>
+
+                
+
+                @*<div class="form-group">
+                        @Html.LabelFor(m => m.FRealEstGuid)
+                        @Html.TextBoxFor(m => m.FRealEstGuid, new { @id = "FRealEstGuid", @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.FRealEstGuid)
+                </div>*@
                 <div class="form-group">
                     @Html.LabelFor(m => m.NickName)*
-                    @Html.TextBoxFor(m => m.NickName, new { @id = "NickName", @class = "form-control", @type = "number", @min = "1" })
+                    @Html.TextBoxFor(m => m.NickName, new { @id = "NickName", @class = "form-control"})
                     @Html.ValidationMessageFor(m => m.NickName)
                 </div>
 

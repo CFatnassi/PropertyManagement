@@ -143,7 +143,7 @@ namespace PropertyManagement.Controllers
 
                 _unitOfWork.UnitKind.Update(ObjToSave);
                 _unitOfWork.Complete();
-                Msg.Msg = Resources.Resource.AddedSuccessfully;
+                Msg.Msg = Resources.Resource.UpdatedSuccessfully;
                 Msg.Code = 1;
             }
             catch (Exception ex)
@@ -208,7 +208,7 @@ namespace PropertyManagement.Controllers
 
                 _unitOfWork.UnitKind.Delete(ObjToSave.Id);
                 _unitOfWork.Complete();
-                Msg.Msg = Resources.Resource.AddedSuccessfully;
+                Msg.Msg = Resources.Resource.DeletedSuccessfully;
                 Msg.Code = 1;
             }
             catch (Exception ex)

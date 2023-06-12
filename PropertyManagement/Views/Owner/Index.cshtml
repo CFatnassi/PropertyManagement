@@ -21,7 +21,7 @@
 
                 <a class="waves-effect waves-light btn btn-primary mb-5" id="js-addnew" href="/Owner/CreateNew">
                     <i class="ti-save"></i>
-                    @Resources.Resource.CreateNewKind
+                    @Resources.Resource.NewOwner
                 </a>
 
 
@@ -35,7 +35,6 @@
                     <tr>
                         
 
-                        <th class="Font">@Resources.Resource.Guid</th>
                         <th class="Font">@Resources.Resource.FullName</th>
                         <th class="Font">@Resources.Resource.IdentityID</th>
 
@@ -110,10 +109,7 @@
 					dataSrc: ""
 				},
 				columns: [
-					{
-
-                        data:"Guid"
-					},
+					
 
 					{
                         data: "FullName"

@@ -316,6 +316,9 @@
   <data name="Delete" xml:space="preserve">
     <value>الحذف</value>
   </data>
+  <data name="DeletedSuccessfully" xml:space="preserve">
+    <value>تم الحذف بنجاح</value>
+  </data>
   <data name="Deleting" xml:space="preserve">
     <value>جار الحذف</value>
   </data>

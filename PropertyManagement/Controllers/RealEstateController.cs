@@ -82,6 +82,8 @@ namespace PropertyManagement.Controllers
 
                 }
 
+                ObjToSave.Guid = Guid.NewGuid();
+
                 _unitOfWork.RealEstate.Add(ObjToSave);
                 _unitOfWork.Complete();
                 Msg.Msg = Resources.Resource.AddedSuccessfully;
@@ -144,7 +146,7 @@ namespace PropertyManagement.Controllers
 
                 _unitOfWork.RealEstate.Update(ObjToSave);
                 _unitOfWork.Complete();
-                Msg.Msg = Resources.Resource.AddedSuccessfully;
+                Msg.Msg = Resources.Resource.UpdatedSuccessfully;
                 Msg.Code = 1;
             }
             catch (Exception ex)
@@ -200,7 +202,7 @@ namespace PropertyManagement.Controllers
 
                 _unitOfWork.RealEstate.Delete(ObjToSave.Guid);
                 _unitOfWork.Complete();
-                Msg.Msg = Resources.Resource.AddedSuccessfully;
+                Msg.Msg = Resources.Resource.DeletedSuccessfully;
                 Msg.Code = 1;
             }
             catch (Exception ex)

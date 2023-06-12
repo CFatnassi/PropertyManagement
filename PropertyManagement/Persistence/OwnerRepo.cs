@@ -41,7 +41,6 @@ namespace PropertyManagement.Persistence
             if (D != null)
             {
                 D.FullName = ObjtToUpdate.FullName;
-                D.IdentityID = ObjtToUpdate.IdentityID;
                 D.Phone1 = ObjtToUpdate.Phone1;
                 D.Phone2 = ObjtToUpdate.Phone2;
                 D.Email = ObjtToUpdate.Email;

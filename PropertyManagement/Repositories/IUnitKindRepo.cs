@@ -6,7 +6,7 @@ using System.Web;
 
 namespace PropertyManagement.Repositories
 {
-    public interface IUnitKind
+    public interface IUnitKindRepo
     {
         void Add(UnitKind ObjToSave);
         void Update(UnitKind ObjtToUpdate);

@@ -34,8 +34,7 @@
                     <tr>
                         <th class="Font">@Resources.Resource.FREKId</th>
 
-                        <th class="Font">@Resources.Resource.Guid</th>
-                        <th class="Font">@Resources.Resource.CoGuid</th>
+                        @*<th class="Font">@Resources.Resource.CoGuid</th>*@
 						<th class="Font">@Resources.Resource.UnitCount</th>
 
                         <th class="Font">@Resources.Resource.Location</th>
@@ -114,16 +113,6 @@
 					},
 
 					{
-                        data: "Guid"
-
-					},
-
-					{
-                        data: "CoGuid"
-
-					},
-
-					{
 
                         data:"UnitCount"
 					},
@@ -145,7 +134,7 @@
 
 
 					{
-                        data: "Id",
+                        data: "Guid",
 						render: function (data, type, r) {
 
 
@@ -157,7 +146,7 @@
 
 
 					{
-                        data: "Id",
+                        data: "Guid",
                         render: function (data) {
 
 
