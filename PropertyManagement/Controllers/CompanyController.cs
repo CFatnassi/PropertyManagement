@@ -1,4 +1,5 @@
-﻿using PropertyManagement.Helpers;
+﻿using Microsoft.AspNet.Identity;
+using PropertyManagement.Helpers;
 using PropertyManagement.Models;
 using PropertyManagement.Persistence;
 using PropertyManagement.Repositories;
@@ -81,6 +82,8 @@ namespace PropertyManagement.Controllers
                 }
 
                 ObjToSave.Guid = Guid.NewGuid();
+                ObjToSave.UserId = User.Identity.GetUserId();
+                ObjToSave.CreateDate = DateTime.Now;
 
                 _unitOfWork.Company.Add(ObjToSave);
                 _unitOfWork.Complete();

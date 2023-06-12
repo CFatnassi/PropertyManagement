@@ -209,18 +209,13 @@
                                     <span>@Resources.Resource.Dashboard</span>
                                 </a>
                             </li>
-                            @if (User.IsInRole("CoOwner"))
+                            @if (User.IsInRole("Admin"))
                             {
+
                                 <li>
-                                    <a href="/Users/Index">
-                                        <i class="fa fa-users"><span class="path1"></span><span class="path2"></span></i>
-                                        <span>@Resources.Resource.Users</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/Users/UserLoginLog">
-                                        <i class="icon-Flag"><span class="path1"></span><span class="path2"></span></i>
-                                        <span>@Resources.Resource.UserLoginLogs</span>
+                                    <a href="/Company/index">
+                                        <i class="icon-Layout-4-blocks"><span class="path1"></span><span class="path2"></span></i>
+                                        <span>@Resources.Resource.Company</span>
                                     </a>
                                 </li>
 
