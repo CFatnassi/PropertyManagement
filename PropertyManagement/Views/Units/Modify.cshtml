@@ -17,7 +17,7 @@
     }
 </style>
 
-
+@Html.HiddenFor(m => m.Guid, new { @Id = "Guid" })
 <div id="myModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: block;">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
@@ -33,13 +33,8 @@
 
                 @Html.ValidationSummary(true, "Please Fix The Foloing Errors!")
 
-                
 
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Guid)
-                    @Html.TextBoxFor(m => m.Guid, new { @id = "Guid", @class = "form-control",@readonly = "readonly" })
-                    @Html.ValidationMessageFor(m => m.Guid)
-                </div>
+
                 <div class="form-group">
                     @Html.LabelFor(m => m.NickName)*
                     @Html.TextBoxFor(m => m.NickName, new { @id = "NickName", @class = "form-control" })
