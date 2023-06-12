@@ -50,7 +50,14 @@ namespace PropertyManagement.Controllers
             try
             {
 
-                var RealEstate = new RealEstate();
+                var RealEstate = new RealEstateView();
+
+                IEnumerable<Models.RealEstateKind> realEstateKinds = _unitOfWork.RealEstateKind.getAll();
+
+                IEnumerable<Models.Company> companies = _unitOfWork.Company.GetAllCompany();
+
+                RealEstate.RealEstateKinds = realEstateKinds;
+                RealEstate.Companies = companies;
 
                 return PartialView(RealEstate);
             }

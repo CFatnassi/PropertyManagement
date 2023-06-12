@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -18,6 +19,7 @@ namespace PropertyManagement.Models
 
         public string UserId { get; set; }
 
+        [Display(Name = "CreateDate", ResourceType = typeof(Resources.Resource))]
         public DateTime CreateDate { get; set; }
          
     }

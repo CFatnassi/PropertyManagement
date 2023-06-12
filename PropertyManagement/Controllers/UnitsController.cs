@@ -47,14 +47,16 @@ namespace PropertyManagement.Controllers
             try
             {
 
-                var Unit = new UnitView();
+                var unit = new UnitView();
                 IEnumerable<UnitKind> unitKinds = _unitOfWork.UnitKind.getAll();
+                IEnumerable<RealEstate> realEstates = _unitOfWork.RealEstate.getAll();
 
-                Unit.UnitKinds = unitKinds;
+                unit.UnitKinds = unitKinds;
+                unit.RealEstates = realEstates;
 
 
 
-                return PartialView(Unit);
+                return PartialView(unit);
             }
             catch (Exception ex)
             {

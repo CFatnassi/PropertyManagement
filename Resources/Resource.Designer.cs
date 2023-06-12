@@ -1312,6 +1312,33 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please Select Company.
+        /// </summary>
+        public static string PlsSelectCompany {
+            get {
+                return ResourceManager.GetString("PlsSelectCompany", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please Select Real-Estate.
+        /// </summary>
+        public static string PlsSelectRealEstate {
+            get {
+                return ResourceManager.GetString("PlsSelectRealEstate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please Select Real-Estate Kind.
+        /// </summary>
+        public static string PlsSelectRealEstateKind {
+            get {
+                return ResourceManager.GetString("PlsSelectRealEstateKind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please Select the realestate.
         /// </summary>
         public static string PlsSelectRlEst {

@@ -1,4 +1,4 @@
-﻿@model PropertyManagement.Models.RealEstate
+﻿@model PropertyManagement.ViewModels.RealEstateView
 @{
 
 }
@@ -37,24 +37,18 @@
 
 
 
-                @*<div class="form-group">
+                <div class="form-group">
                     @Html.LabelFor(m => m.FREKId)  <strong class="text-danger">*</strong>
 
-                    @Html.DropDownListFor(m => m.FREKId, new SelectList(Model.RealEstateKinds, "Code", "ArName"), Resources.Resource.PlsSelectUnitKind, new { @id = "FREKId", @class = "form-select" })
-                </div>*@
-
-                
+                    @Html.DropDownListFor(m => m.FREKId, new SelectList(Model.RealEstateKinds, "Code", "ArName"), Resources.Resource.PlsSelectRealEstateKind, new { @id = "FREKId", @class = "form-select" })
+                </div>
 
                 <div class="form-group">
-                    @Html.LabelFor(m => m.FREKId)
-                    @Html.TextBoxFor(m => m.FREKId, new { @id = "FREKId", @class = "form-control" })
-                    @Html.ValidationMessageFor(m => m.FREKId)
+                    @Html.LabelFor(m => m.CoGuid)  <strong class="text-danger">*</strong>
+
+                    @Html.DropDownListFor(m => m.CoGuid, new SelectList(Model.Companies, "Guid", "Name"), Resources.Resource.PlsSelectCompany, new { @id = "CoGuid", @class = "form-select" })
                 </div>
-                <div class="form-group">
-                    @Html.LabelFor(m => m.CoGuid)
-                    @Html.TextBoxFor(m => m.CoGuid, new { @id = "CoGuid", @class = "form-control" })
-                    @Html.ValidationMessageFor(m => m.CoGuid)
-                </div>
+
                 <div class="form-group">
                     @Html.LabelFor(m => m.UnitCount)*
                     @Html.TextBoxFor(m => m.UnitCount, new { @id = "UnitCount", @class = "form-control", @type = "number", @min = "1" })

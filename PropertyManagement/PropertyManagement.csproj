@@ -228,7 +228,6 @@
     <Compile Include="Repositories\IUnitOfWork.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\RealEstateView.cs" />
-    <Compile Include="ViewModels\UnitREstView.cs" />
     <Compile Include="ViewModels\UnitView.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -534,6 +534,15 @@
   <data name="PleaseWait" xml:space="preserve">
     <value>Please Wait</value>
   </data>
+  <data name="PlsSelectCompany" xml:space="preserve">
+    <value>Please Select Company</value>
+  </data>
+  <data name="PlsSelectRealEstate" xml:space="preserve">
+    <value>Please Select Real-Estate</value>
+  </data>
+  <data name="PlsSelectRealEstateKind" xml:space="preserve">
+    <value>Please Select Real-Estate Kind</value>
+  </data>
   <data name="PlsSelectRlEst" xml:space="preserve">
     <value>Please Select the realestate</value>
   </data>
