@@ -35,6 +35,8 @@ namespace PropertyManagement.Controllers
 
         public ActionResult CoCompany()
         {
+
+
             return View();
         }
 
