@@ -161,7 +161,7 @@
 						render: function (data, type, r) {
 
 
-                            return "<button  class='waves-effect waves-light btn btn-info mb-5 js-modify btn-sm' href='/Company/Modify/" + data + "'> <i class='ti-slice'></i></button>";
+                            return "<button  class='waves-effect waves-light btn btn-info mb-5 js-modify  btn-sm' href='/Company/Modify/" + data + "'> <i class='ti-slice'></i></button>";
 
 
 						}
@@ -211,6 +211,25 @@
                     setTimeout(function () { dialog.modal('hide'); }, 1000);
                 });
         });
+
+        $('#tdataTable').on('click', '.js-chima', function (e) {
+			var dialog = bootbox.dialog({
+					title: '@Resources.Resource.PleaseWait',
+					message: '<p><i class="fa fa-spin fa-spinner"></i> @Resources.Resource.PleaseWait...</p>',
+					closeButton: false
+				});
+                e.preventDefault();
+
+                $('#myModal').modal('hide');
+                $('#myModal').unbind().modal();
+             	url = this.getAttribute('href');
+				$.get(url, function (data) {
+					$('#myModal').replaceWith(data);
+
+                    $('#myModal').modal('toggle');
+                    setTimeout(function () { dialog.modal('hide'); }, 1000);
+                });
+		});
 
 		$('#tdataTable').on('click', '.js-modify', function (e) {
 			var dialog = bootbox.dialog({

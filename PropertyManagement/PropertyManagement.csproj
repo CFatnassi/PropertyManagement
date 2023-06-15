@@ -197,6 +197,10 @@
     <Compile Include="Migrations\202306070707309_Mint-run.Designer.cs">
       <DependentUpon>202306070707309_Mint-run.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202306151822523_AlterUserTanle.cs" />
+    <Compile Include="Migrations\202306151822523_AlterUserTanle.Designer.cs">
+      <DependentUpon>202306151822523_AlterUserTanle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -19882,6 +19886,8 @@
     <Content Include="Views\Company\CreateNew.cshtml" />
     <Content Include="Views\Company\Modify.cshtml" />
     <Content Include="Views\Company\Remove.cshtml" />
+    <Content Include="Views\Company\CoCompany.cshtml" />
+    <Content Include="Views\Company\Test.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -19918,6 +19924,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202306070707309_Mint-run.resx">
       <DependentUpon>202306070707309_Mint-run.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202306151822523_AlterUserTanle.resx">
+      <DependentUpon>202306151822523_AlterUserTanle.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
