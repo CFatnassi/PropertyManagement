@@ -197,6 +197,10 @@
     <Compile Include="Migrations\202306070707309_Mint-run.Designer.cs">
       <DependentUpon>202306070707309_Mint-run.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202306151932238_exp.cs" />
+    <Compile Include="Migrations\202306151932238_exp.Designer.cs">
+      <DependentUpon>202306151932238_exp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -19918,6 +19922,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202306070707309_Mint-run.resx">
       <DependentUpon>202306070707309_Mint-run.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202306151932238_exp.resx">
+      <DependentUpon>202306151932238_exp.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

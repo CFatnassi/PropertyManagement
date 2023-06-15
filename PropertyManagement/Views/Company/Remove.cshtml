@@ -18,7 +18,9 @@
     }
 </style>
 
-
+@Html.HiddenFor(m => m.Guid, new { @Id = "Guid" })
+@Html.HiddenFor(m => m.CreateDate, new { @Id = "CreateDate" })
+@Html.HiddenFor(m => m.Logo, new { @Id = "Logo" })
 <div id="myModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: block;">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
@@ -51,11 +53,7 @@
                     @Html.TextBoxFor(m => m.Adress, new { @id = "Adress", @class = "form-control" })
                     @Html.ValidationMessageFor(m => m.Adress)
                 </div>
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Guid)*
-                    @Html.TextBoxFor(m => m.Guid, new { @id = "Guid", @class = "form-control" })
-                    @Html.ValidationMessageFor(m => m.Guid)
-                </div>
+
 
                 <div class="form-group">
                     @Html.LabelFor(m => m.Status)*
@@ -63,11 +61,7 @@
                     @Html.ValidationMessageFor(m => m.Status)
                 </div>
 
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Logo)
-                    @Html.TextBoxFor(m => m.Logo, new { @id = "Logo", @class = "form-control" })
-                    @Html.ValidationMessageFor(m => m.Logo)
-                </div>
+               
                 <div class="form-group">
                     @Html.LabelFor(m => m.Country)
                     @Html.TextBoxFor(m => m.Country, new { @id = "Country", @class = "form-control" })
@@ -78,11 +72,7 @@
                     @Html.TextBoxFor(m => m.UserId, new { @id = "UserId", @class = "form-control" })
                     @Html.ValidationMessageFor(m => m.UserId)
                 </div>
-                <div class="form-group">
-                    @Html.LabelFor(m => m.CreateDate)
-                    @Html.TextBoxFor(m => m.CreateDate, new { @id = "CreateDate", @class = "form-control", @type = "DateTime" })
-                    @Html.ValidationMessageFor(m => m.CreateDate)
-                </div>
+
             </div>
             <div class="modal-footer">
 
