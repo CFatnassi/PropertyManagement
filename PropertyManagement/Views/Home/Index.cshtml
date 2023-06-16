@@ -3,17 +3,27 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Soon</h1>
 
+
+@if (User.IsInRole("CoOwner"))
+{
+
+    <h1>Welcome co Owner</h1>
+}
+
+@if (User.IsInRole("Admin"))
+{
+
+    <h1>Welcom Admin</h1>
+}
 @section Scripts {
 
     <script type="text/javascript">
-    $(document).ready(function ()
-    {
-         
+        $(document).ready(function () {
 
 
-    });
+
+        });
 
 
     </script>

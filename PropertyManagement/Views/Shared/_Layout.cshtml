@@ -220,40 +220,53 @@
                                 </li>
                                 <Li>
                                     <A Href="/RealEstate/Index">
-                                        <I Class="Icon-Layout-4-Blocks"><Span Class="Path1"></Span><Span Class="Path2"></Span></I>
+                                        <I Class="icon-layout-4-blocks"><Span Class="Path1"></Span><Span Class="Path2"></Span></I>
                                         <Span>@Resources.Resource.RealEstate</Span>
                                     </A>
                                 </Li>
                                 <Li>
                                     <A Href="/Owner/Index">
-                                        <I Class="Icon-Layout-4-Blocks"><Span Class="Path1"></Span><Span Class="Path2"></Span></I>
+                                        <I Class="icon-layout-4-blocks"><Span Class="Path1"></Span><Span Class="Path2"></Span></I>
                                         <Span>@Resources.Resource.Owner</Span>
                                     </A>
                                 </Li>
                                 <Li>
                                     <A Href="/Units/Index">
-                                        <I Class="Icon-Layout-4-Blocks"><Span Class="Path1"></Span><Span Class="Path2"></Span></I>
+                                        <I Class="icon-layout-4-blocks"><Span Class="Path1"></Span><Span Class="Path2"></Span></I>
                                         <Span>@Resources.Resource.Unit</Span>
                                     </A>
                                 </Li>
                                 <Li>
                                     <A Href="/RealEstateKind/Index">
-                                        <I Class="Icon-Layout-4-Blocks"><Span Class="Path1"></Span><Span Class="Path2"></Span></I>
+                                        <I Class="icon-layout-4-blocks"><Span Class="Path1"></Span><Span Class="Path2"></Span></I>
                                         <Span>@Resources.Resource.RealEstateKind</Span>
                                     </A>
                                 </Li>
                                 <Li>
                                     <A Href="/RentKinds/Index">
-                                        <I Class="Icon-Layout-4-Blocks"><Span Class="Path1"></Span><Span Class="Path2"></Span></I>
+                                        <I Class="icon-layout-4-blocks"><Span Class="Path1"></Span><Span Class="Path2"></Span></I>
                                         <Span>@Resources.Resource.RentKind</Span>
                                     </A>
                                 </Li>
                                 <Li>
                                     <A Href="/UnitKind/Index">
-                                        <I Class="Icon-Layout-4-Blocks"><Span Class="Path1"></Span><Span Class="Path2"></Span></I>
+                                        <I Class="icon-layout-4-blocks"><Span Class="Path1"></Span><Span Class="Path2"></Span></I>
                                         <Span>@Resources.Resource.UnitKind</Span>
                                     </A>
-                                </Li>                              
+                                </Li>
+
+
+
+                            }
+
+                            @if (User.IsInRole("CoOwner"))
+                            {
+                                <li>
+                                    <a href="/Company/CoCompany">
+                                        <i class="icon-Layout-4-blocks"><span class="path1"></span><span class="path2"></span></i>
+                                        <span>@Resources.Resource.Company</span>
+                                    </a>
+                                </li>
 
                             }
 

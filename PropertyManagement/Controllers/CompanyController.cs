@@ -21,8 +21,22 @@ namespace PropertyManagement.Controllers
             _unitOfWork = new UnitOfWork(new ApplicationDbContext());
         }
         // GET: Company
+
+        [Authorize(Roles = "Admin")]
         public ActionResult Index()
         {
+            return View();
+        }
+
+        public ActionResult Test()
+        {
+            return View();
+        }
+
+        public ActionResult CoCompany()
+        {
+
+
             return View();
         }
 
