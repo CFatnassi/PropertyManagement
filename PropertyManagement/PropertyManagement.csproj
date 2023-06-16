@@ -201,6 +201,10 @@
     <Compile Include="Migrations\202306151822523_AlterUserTanle.Designer.cs">
       <DependentUpon>202306151822523_AlterUserTanle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202306161829067_userss.cs" />
+    <Compile Include="Migrations\202306161829067_userss.Designer.cs">
+      <DependentUpon>202306161829067_userss.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -19924,6 +19928,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202306070707309_Mint-run.resx">
       <DependentUpon>202306070707309_Mint-run.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202306161829067_userss.resx">
+      <DependentUpon>202306161829067_userss.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

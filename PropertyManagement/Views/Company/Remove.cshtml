@@ -21,6 +21,7 @@
 @Html.HiddenFor(m => m.Guid, new { @Id = "Guid" })
 @Html.HiddenFor(m => m.CreateDate, new { @Id = "CreateDate" })
 @Html.HiddenFor(m => m.Logo, new { @Id = "Logo" })
+@Html.HiddenFor(m => m.UserId, new { @Id = "UserId" })
 <div id="myModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: block;">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
@@ -67,11 +68,7 @@
                     @Html.TextBoxFor(m => m.Country, new { @id = "Country", @class = "form-control" })
                     @Html.ValidationMessageFor(m => m.Country)
                 </div>
-                <div class="form-group">
-                    @Html.LabelFor(m => m.UserId)
-                    @Html.TextBoxFor(m => m.UserId, new { @id = "UserId", @class = "form-control" })
-                    @Html.ValidationMessageFor(m => m.UserId)
-                </div>
+                
 
             </div>
             <div class="modal-footer">

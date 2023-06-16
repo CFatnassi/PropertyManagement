@@ -1,8 +1,157 @@
 ﻿
+@model PropertyManagement.Models.Company
 @{
     ViewBag.Title = "CoCompany";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Your Company Info</h2>
+<style>
+    .modal-header {
+        background-color: #3ea7ed !important;
+    }
+
+    .modal-title {
+        color: white !important;
+    }
+
+    .close {
+        color: white !important;
+    }
+</style>
+
+
+<div id="myModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: block;">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h5 class="modal-title" id="myModalLabel">
+
+                    @Resources.Resource.AddNew
+
+                </h5>
+            </div>
+            <div class="modal-body">
+
+
+                @Html.ValidationSummary(true, "Please Fix The Foloing Error!")
+
+
+
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Name)*
+                    @Html.TextBoxFor(m => m.Name, new { @id = "Name", @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Name)
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Email)*
+                    @Html.TextBoxFor(m => m.Email, new { @id = "Email", @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Email)
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Adress)
+                    @Html.TextBoxFor(m => m.Adress, new { @id = "Adress", @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Adress)
+                </div>
+
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Status)*
+                    @Html.TextBoxFor(m => m.Status, new { @id = "Status", @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Status)
+                </div>
+
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Country)
+                    @Html.TextBoxFor(m => m.Country, new { @id = "Country", @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Country)
+                </div>
+
+            </div>
+            <div class="modal-footer">
+
+
+
+                <button type="submit" class="waves-effect waves-light btn btn-info mb-5 fa fa-pencil add-new" id="save"> @Resources.Resource.Save </button>
+
+
+                <button type="button" class="waves-effect waves-light btn btn-default mb-5 fa fa-power-off" data-bs-dismiss="modal">  @Resources.Resource.Close</button>
+
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval");
+<script>
+        $(document).on('click', '#save', function (e) {
+			
+
+            @*if (($("#Name").val() == '') || ($("#Email").val() == '') || ($("#Adress").val() == '') || ($("#Guid").val() == '') || ($("#Status").val() == '') || ($("#Country").val() == '') || ($("#Logo").val() == '')|| ($("#UserId").val() == '') || ($("#CreateDate").val() == ''))  {
+					bootbox.alert({
+						message: '@Resources.Resource.PleasefillalRequiredfields',
+						size: 'small'
+					});
+
+				}
+				else {*@
+
+
+				var dialog = bootbox.dialog({
+					title: '@Resources.Resource.PleaseWait',
+					message: '<p><i class="fa fa-spin fa-spinner"></i> @Resources.Resource.Saving...</p>',
+					closeButton: false
+				});
+
+
+				var dataToSave = {
+                    Name: $("#Name").val(),
+                    Email: $("#Email").val(), Adress: $("#Adress").val(), Guid: $("#Guid").val(), Status: $("#Status").val(), Country: $("#Country").val(), Logo: $("#Logo").val(), UserId: $("#UserId").val(), CreateDate: $("#CreateDate").val()
+				};
+				$.ajax({
+					type: "POST",
+                    url: "/Company/SaveNew",
+					data: JSON.stringify(dataToSave),
+					contentType: 'application/json',
+					success: function (data) {
+						setTimeout(function () {                            dialog.modal('hide');                         }, 1000);
+						if (data.Code == 0) {
+							toastr.error(data.Msg);
+						}
+						else if (data.Code == 1) {
+							$('#myModal').modal('hide');
+							toastr.success(data.Msg);
+							tabelMemRef.ajax.reload();
+						 ;
+						}
+
+					},
+					error: function (data) {
+						setTimeout(function () {                            dialog.modal('hide');                         }, 1000);
+						toastr.error(data);
+					}
+
+
+
+				});
+
+				
+
+			});
+</script>
+}
+
+
+
+
+
 
